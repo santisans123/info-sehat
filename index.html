@@ -1,33 +1,337 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WELCOME</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="author" content="Imanuddin Ardian Hermawan">
+    <meta name="description" content="Website untuk dicoding">
+    <title>Coronavirus Information</title>
+
+    <link href="//db.onlinewebfonts.com/c/7a8bc7c29b5bcadb9510cca51210ac46?family=Sitka+Banner" rel="stylesheet" type="text/css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
     <header>
-        <div class="main">
-            <ul>
-                <li clas="active"><a href="about\about.html">about</a></li>
-                <li><a href="kontak\kontak.html">contact</a></li> 
-            </ul>
-        </div>
-        
-        <div class="button">
-            <a href="photo\photo.html" class="btn1">PHOTO</a>
-            <a href="biodata\biodata.html" class="btn1">BIODATA</a>
-        </div>
-        <div class="title">
-            <h1 align="center">WELCOME</h1>
-            <h1 align="center">IN MY PROFILE</h1>
-        </div>
+        <nav>
+            <a href="#home" class="fas fa-hospital fa-3x"></a>
+            <div class="header-title">
+                <h4>Healty</h4>
+                <h4>Info</h4>
+            </div>
+        </nav>
+        <nav class="header-mobile">
+            <button class="active" onclick="toggleFunction()">
+                <i class="fas fa-list-ul "></i>
+            </button>
+        </nav>
+        <nav class="header-toggle" toggle="true" style="display: none ">
+            <a href="#information" class="active">Information</a>
+            <a href="#protection">HealthCare</a>
+            <a href="#about">About</a>
+        </nav>
     </header>
+    <main>
+        <article id="home" class="jumbotron">
+            <section class="jumbotron-content">
+                <div class="jumbotron-image">
+                    <img src="assets/52118-virus-corona-covid-19.jpg" alt="">
+                </div>
+                <div class="jumbotron-desc">
+                    <h4>COVID-19</h4>
+                    <p>COVID-19/Corana virus adalah sebuah virus yang
+                        yang sudah menyebar dibanyak negara didunia, tak
+                        terkecuali Indonesia. Virus ini berasal dari china tepatnya
+                        dari kota Wuhan. Penyebaran virus ini sangat cepat
+                        sehingga termasuk dalam fast-pandemic. </p>
+                </div>
+            </section>
+        </article>
+        <div id="content">
+            <article id="information" >
+                <section class="card-covid">
+                    <h4 class="card-title virus">
+                        Penyebaran Virus COVID-19 di Indonesia
+                    </h4>
+                    <div class="card-menu">
+                        <p>Di indonesia sendiri penyebaran virus ini sangat banyak. Terhitung mulai tanggal
+                            7 april 2020 adapun data penyebaranya sebagai berikut.</p>
+                    </div>
+                    <div class="card-menu carding">
+                        <div class="card-place">
+                            <div class="card-place-menu card-3 infection">
+                                <div class="icon">
+                                    <i class="fas fa-viruses" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    Terinveksi
+                                </h5>
+                                <p class="virus">2.738</p>
+                            </div>
+                            <div class="card-place-menu card-3 healed">
+                                <div class="icon">
+                                    <i class="fas fa-heartbeat" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    Sembuh
+                                </h5>
+                                <p class="virus">204</p>
+                            </div>
+                            <div class="card-place-menu card-3 deceased">
+                                <div class="icon">
+                                    <i class="fas fa-skull" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    Meninggal
+                                </h5>
+                                <p class="virus">221</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-menu virus-information">
+                        <div class="virus-content">
+                            <div class="icon-virus">
+                                <span class="fas fa-viruses"/>
+                            </div>
+                            <div class="content-virus">
+                                <p>Telah diketahui jika virus ini menyebar dengan cara penyebaran cairan yang dihasilkan pada saat bersin
+                                    atau sebagainya. Seperti yang diatas penyebaran virus ini dapat dihentikan jika kita membuat jarak pada
+                                    saat bertemu oleh seorang</p>
+                            </div>
+                        </div>
+                        <div class="virus-content">
+                            <div class="icon-virus">
+                                <span class="fas fa-heartbeat"/>
+                            </div>
+                            <div class="content-virus">
+                                <p>Tingkat kesembuhan untuk penyakit ini tergolong tinggi diseluruh dunia. Jika terkena virus maka kita harus
+                                    rajin makan makanan bergizi, istirahat yang teratur , dan jangan memikirkan sesuatu yang membuat stress
+                                    agar system imun kita menjadi lebih kuat.</p>
+                            </div>
+                        </div>
+                        <div class="virus-content">
+                            <div class="icon-virus">
+                                <span class="fas fa-skull"/>
+                            </div>
+                            <div class="content-virus">
+                                <p>Virus ini memiliki tingkat kematian yang tinggi bagi orang yang sudah lanjut usia. Virus ini menyerang
+                                    paru-paru dan membuat yang terkena virus ini akan menjadi sesak nafas. Kebanyakan orang yang lanjut usia
+                                    meninggal karena mungkin system kekebalan tubuhnya tidak sebagus orang dewasa ataupun para remaja. Tetapi
+                                    jangan anggap remeh walau remaja tinkat kematianya lebih renda. Lebih baik berdiam diri dirumah dan tidak
+                                    menularkan/tidak terkena virus ini.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article id="symptom">
+                <section class="card-covid">
+                    <h4 class="card-title">
+                        Gejala Virus Corona
+                    </h4>
+                    <div class="card-menu">
+                        <p>Meskipun virus ini penyebaranya tergolong sangat cepat.Tetapi kita masih bisa mengurangi penyebarnya
+                            dengan melakukan hal dibawah ini:</p>
+                    </div>
+                    <div class="card-menu">
+                        <div class="card-place">
+                            <div class="card-2 card-place-menu">
+                                <div class="icon">
+                                    <i class="fas fa-thermometer-half" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    demam
+                                </h5>
+                                <p>Suhu tubuh berada diatas 38&#8451. Itu mungkin akan menyebabkan badan menjadi lemah karena suhu tubuh</p>
+                            </div>
+                            <div class="card-2 card-place-menu">
+                                <div class="icon">
+                                    <i class="fas fa-head-side-cough" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    batuk
+                                </h5>
+                                <p>Dikarenakan virus ini bisa menyebar melalui cairan.Maka jika batuk harus ditutupi
+                                    masker agar tidak menular keorang lain</p>
+                            </div>
+                            <div class="card-2 card-place-menu">
+                                <div class="icon">
+                                    <i class="fas fa-lungs-virus" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    sesak nafas
+                                </h5>
+                                <p>Virus ini menyerang paru-paru jadi korban akan merasakan sesak nafas dan mungkin pusing karena kurangnya oksigen.</p>
+                            </div>
+                            <div class="card-2 card-place-menu four">
+                                <div class="icon">
+                                    <i class="fas fa-procedures" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    sering lelah
+                                </h5>
+                                <p>Dikarenakan paru-paru yang diserang.Maka tubuh akan cepat lelah karena kurangnya oksigen dan biasanya
+                                    merasakan sakit dipersendian tubuh.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article id="protection">
+                <section class="card-covid">
+                    <h4 class="card-title">
+                        Cara Pencegahan Penularan Covid-19
+                    </h4>
+                    <div class="card-menu">
+                        <p>Meskipun virus ini penyebaranya tergolong sangat cepat. Tetapi kita masih
+                            bisa mengurangi penyeberanya dengan melakukan hal dibawah ini.</p>
+                    </div>
+                    <div class="card-menu">
+                        <div class="card-place">
+                            <div class="card-2 card-place-menu">
+                                <div class="icon">
+                                    <i class="fas fa-hands-wash" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    rajin cuci tangan
+                                </h5>
+                                <p>Mencuci tangan dengan sabun atau hand sanitizer. Itu akan membuat
+                                    membunuh virus dan membuat tangan menjadi bersih</p>
+                            </div>
+                            <div class="card-2 card-place-menu">
+                                <div class="icon">
+                                    <i class="fas fa-users" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    hindari keramaian
+                                </h5>
+                                <p>Dikarenakan virus ini menyebar melalui cairan dan kontak fisik, diwajibkan
+                                    untuk tidak keluar rumah jika tidak diperlukan.</p>
+                            </div>
+                            <div class="card-2 card-place-menu">
+                                <div class="icon">
+                                    <i class="fas fa-utensils" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    makanan bergizi
+                                </h5>
+                                <p>Dengan menjaga tubuh agar tetap fit dan sehat. Diperlukan makanan yang bergizi
+                                    agar system imun tubuh meningkat.</p>
+                            </div>
+                            <div class="card-2 card-place-menu four">
+                                <div class="icon">
+                                    <i class="fas fa-running" ></i>
+                                </div>
+                                <h5 class="card-place-title">
+                                    rajin berolahraga
+                                </h5>
+                                <p>Makan yang bergizi dimbangi dengan olahraga yang teratur pasti akan membuat imun
+                                    tubuh lebih kuat dalam menangkal virus.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </article>
+            <article id="about">
+                <section class="card-covid bg-dark-blue-card">
+                    <h4 class="card-title">
+                        TENTANG PEMBUAT
+                    </h4>
+                    <div class="title-hobby">
+                        <h4>HOBBY</h4>
+                    </div>
+                    <div class="hobby-list">
+                        <button id="coding" class="fas fa-laptop-code active">
+                        </button>
+                        <button id="networking" class="fas fa-network-wired">
+                        </button>
+                        <button id="design" class="fas fa-paint-brush">
+                        </button>
+                        <button id="hiking" class="fas fa-mountain">
+                        </button>
+                    </div>
+                    <div class="hobby-desc">
+                        <div id="hobby-coding" style="display: block">
+                            <h4 class="title">Coding</h4>
+                            <p>Aku menyukai koding walaupun kadang-kadang membuat frustasi. Alasanya adalah walaupun coding
+                            itu rumit tapi pada saat sudah jadi akan menjadi lebih bagus karena dapat menciptakan sebuah karya</p>
+                        </div>
+                        <div id="hobby-networking">
+                            <h4 class="title">Networking</h4>
+                            <p>Dikarenakan dulu saya menempuk pendidikan SMK dibidang TKJ. Maka saya sedikit-sedikit mengerti
+                            tentang cara kerja sebuah jaringan atau bagaimana caranya mengamankan sebuah sistem operasi.</p>
+                        </div>
+                        <div id="hobby-design">
+                            <h4 class="title">Design</h4>
+                            <p>Saya menyukai design karena itu adalah seuatu cara untuk mengunkapkan perasaan dan pikiran dalam
+                            hal yang bersamaan. Dengan design yang bagus maka akan menyebabkan pergantian emosi menjadi lebih baik
+                            dan lebih positif dalam menjalani sesuatu.</p>
+                        </div>
+                        <div id="hobby-hiking">
+                            <h4 class="title">Hiking</h4>
+                            <p>Saya suka mendaki karena perasaan pada saat menempuh puncak itu menurut saya seperti menjalani kerasnya
+                            hidup ini, namun meski begitu kita harus menyampainya demi sebuah tujuan. Dan hitung-hitung mensyukuri nikmat
+                            tuhan yang terhampar luas dibumi ini.</p>
+                        </div>
+                    </div>
+                </section>
+            </article>
+        </div>
+        <aside>
+            <div class="profile-click">
+                <i class="fas fa-angle-double-left"></i>
+            </div>
+            <h4 class="title">Pembuat</h4>
+            <img src="assets/fotoku.jpg" alt="loading gan">
+            <div class="aside-list">
+                <div class="aside-menu first">
+                    <i class="fas fa-user-circle"></i>
+                    <p>Imanuddin Ardian Hermawan</p>
+                </div>
+                <div class="aside-menu">
+                    <i class="fas fa-home"></i>
+                    <p>Surabaya, East Java</p>
+                </div>
+                <div class="aside-menu">
+                    <i class="fas fa-heart"></i>
+                    <p>UX/UI Designer</p>
+                </div>
+                <div class="aside-menu four">
+                    <i class="fas fa-comments"></i>
+                    <p>Just ordinary man who have interested in website and UI/UX design</p>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <div class="upper-footer">
+            <div class="footer-menu">
+                <h4 class="title">support by</h4>
+                <p>Imanuddin Ardian Hermawan</p>
+                <p>Dicoding.com</p>
+            </div>
+            <div class="footer-menu">
+                <h4 class="title">referensi</h4>
+                <a href="https://www.alodokter.com/">Alodokter.com</a>
+            </div>
+            <div class="footer-menu">
+                <h4 class="title">social media</h4>
+                <div class="medsos">
+                    <a href="https://www.instagram.com/ardian_hermawan_/" class="fab fa-instagram"></a>
+                    <a href="https://www.linkedin.com/in/imanuddin-ardian-hermawan-059963170/" class="fab fa-linkedin"></a>
+                    <a href="https://github.com/" class="fab fa-github"></a>
+                </div>
+            </div>
+        </div>
+        <div class="lower-footer">
+            <h4 class="copyright">COPYRIGHT 2020 ALL RIGHT RESERVED</h4>
+        </div>
+    </footer>
 </body>
-</html>
 
-<script type="text/javascript">
-    
-        alert("Selamat Datang di Profil Saya")
-    </script>
+<script src="javascript/interfaces.js"></script>
+
+</html>
