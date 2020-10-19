@@ -1,0 +1,32 @@
+@import "coloring";
+
+@import "font";
+
+@import "responsive-devices";
+
+@import "mixin";
+
+@import "animation";
+
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  body{
+    padding: 0;
+    margin: 0;
+    font-family: "Sitka Banner", sans-serif ;
+  }
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include flexbox();
+  @include flex-wrap(wrap);
+  background-color: $color_blue_dark;
+  padding: 2rem;
+  z-index: 1000;
+}
