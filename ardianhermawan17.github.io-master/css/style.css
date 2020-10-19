@@ -1,0 +1,986 @@
+/* Normal desktop : 1200px. */
+/* Normal desktop : 992px. */
+/* Tablet desktop : 768px. */
+/* Large Mobile : 480px */
+/*small mobile : 320px */
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+* body {
+  padding: 0;
+  margin: 0;
+  font-family: "Sitka Banner", sans-serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  background-color: #110133;
+  padding: 2rem;
+  z-index: 1000;
+}
+header nav:first-child {
+  flex: 0 0 40%;
+  width: 40%;
+  max-width: 40%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+header nav:first-child a {
+  color: #FFDC34 !important;
+  border: none;
+}
+header nav:first-child .header-title {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  margin-left: 0.5rem;
+}
+header nav:first-child .header-title h4 {
+  color: #FFDC34;
+  font-size: 1rem;
+  margin: 0;
+}
+header nav.header-toggle {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  flex: 0 0 60%;
+  width: 60%;
+  max-width: 60%;
+}
+header nav.header-toggle a {
+  color: #FFDC34;
+  margin: 0 1.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+header nav.header-toggle a.active {
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background: #110133;
+  box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+}
+header nav.header-mobile {
+  display: none;
+}
+@media (max-width: 767px) {
+  header nav:first-child {
+    width: 100%;
+  }
+  header nav.header-mobile {
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+    margin-left: auto;
+  }
+  header nav.header-mobile button {
+    border: none;
+    outline: none;
+  }
+  header nav.header-mobile button.active {
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    background: #110133;
+    box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+    cursor: pointer;
+  }
+  header nav.header-mobile button.active:hover {
+    box-shadow: inset 3px 3px 6px #04020A, inset -3px -3px 6px #210164;
+  }
+  header nav.header-mobile button.clicked {
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    background: #110133;
+    box-shadow: inset 3px 3px 6px #04020A, inset -3px -3px 6px #210164;
+    cursor: pointer;
+  }
+  header nav.header-mobile button.clicked:hover {
+    box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+  }
+  header nav.header-mobile button i {
+    font-size: 2rem;
+    color: #FFDC34;
+  }
+  header nav.header-toggle {
+    margin: 2rem auto 0 auto;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  header nav.header-toggle a {
+    margin: 1rem 0;
+  }
+  header nav.header-toggle a.active {
+    padding: 0.5rem 4rem;
+    border-radius: 4px;
+  }
+}
+
+main {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  width: 100%;
+  padding-top: 110px;
+  padding-bottom: 30px;
+  background-color: #E1F4F3;
+}
+main .jumbotron {
+  width: 100%;
+  background-color: #4DD599;
+  padding: 3em 0;
+}
+main .jumbotron .jumbotron-content {
+  width: 90%;
+  padding: 2.5rem 2rem;
+  margin: auto;
+  background-color: inherit;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  border-radius: 20px;
+  box-shadow: 5px 5px 20px #256649, -5px -5px 20px #75ffe9;
+}
+main .jumbotron .jumbotron-content .jumbotron-image {
+  flex: 0 0 35%;
+  width: 35%;
+  max-width: 35%;
+}
+main .jumbotron .jumbotron-content .jumbotron-image img {
+  border-radius: 12px;
+  max-width: 100%;
+  height: auto;
+}
+main .jumbotron .jumbotron-content .jumbotron-desc {
+  flex: 0 0 65%;
+  width: 65%;
+  max-width: 65%;
+  padding: 0 2rem;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+main .jumbotron .jumbotron-content .jumbotron-desc h4 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #110133;
+}
+main .jumbotron .jumbotron-content .jumbotron-desc p {
+  color: #110133;
+  font-size: 1.5rem;
+}
+@media (max-width: 767px) {
+  main .jumbotron .jumbotron-content .jumbotron-image, main .jumbotron .jumbotron-content .jumbotron-desc {
+    flex: 0 0 100%;
+    width: 100%;
+    max-width: 100%;
+  }
+  main .jumbotron .jumbotron-content .jumbotron-desc {
+    margin-top: 1.5rem;
+  }
+  main .jumbotron .jumbotron-content .jumbotron-desc p {
+    font-size: 1rem;
+  }
+}
+main #content {
+  width: 75%;
+}
+main #content #information, main #content #symptom, main #content #protection, main #content #about {
+  width: auto;
+  padding: 1rem 3rem;
+}
+main #content #information .card-covid, main #content #symptom .card-covid, main #content #protection .card-covid, main #content #about .card-covid {
+  padding: 1rem;
+  margin: 3rem 0;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #92B8B6, -5px -5px 10px #fcfcfc;
+}
+main #content #information .card-covid > .card-title, main #content #symptom .card-covid > .card-title, main #content #protection .card-covid > .card-title, main #content #about .card-covid > .card-title {
+  font-weight: bold;
+  text-align: center;
+  color: #110133;
+  font-size: 2.5rem;
+  padding: 0 1rem;
+}
+main #content #information .card-covid > .card-title.virus, main #content #symptom .card-covid > .card-title.virus, main #content #protection .card-covid > .card-title.virus, main #content #about .card-covid > .card-title.virus {
+  padding: 0 1.6rem;
+}
+main #content #information .card-covid .card-menu, main #content #symptom .card-covid .card-menu, main #content #protection .card-covid .card-menu, main #content #about .card-covid .card-menu {
+  padding: 1rem 3rem;
+}
+main #content #information .card-covid .card-menu > p, main #content #symptom .card-covid .card-menu > p, main #content #protection .card-covid .card-menu > p, main #content #about .card-covid .card-menu > p {
+  font-size: 1.5rem;
+  color: #110133;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content #information .card-covid .card-menu > p, main #content #symptom .card-covid .card-menu > p, main #content #protection .card-covid .card-menu > p, main #content #about .card-covid .card-menu > p {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  main #content #information .card-covid .card-menu > p, main #content #symptom .card-covid .card-menu > p, main #content #protection .card-covid .card-menu > p, main #content #about .card-covid .card-menu > p {
+    text-align: center;
+  }
+}
+main #content #information .card-covid .card-menu:last-child, main #content #symptom .card-covid .card-menu:last-child, main #content #protection .card-covid .card-menu:last-child, main #content #about .card-covid .card-menu:last-child {
+  margin-bottom: 2rem;
+}
+main #content #information .card-covid .card-menu .card-place, main #content #symptom .card-covid .card-menu .card-place, main #content #protection .card-covid .card-menu .card-place, main #content #about .card-covid .card-menu .card-place {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  -ms-justify-content: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  -webkit-align-items: space-evenly;
+  -moz-align-items: space-evenly;
+  -ms-align-items: space-evenly;
+  align-items: space-evenly;
+}
+main #content #information .card-covid .card-menu .card-place .card-2, main #content #symptom .card-covid .card-menu .card-place .card-2, main #content #protection .card-covid .card-menu .card-place .card-2, main #content #about .card-covid .card-menu .card-place .card-2 {
+  -ms-flex: 0 0 38.55556%;
+  flex: 0 0 38.55556%;
+  max-width: 38.55556%;
+  margin: 2rem;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content #information .card-covid .card-menu .card-place .card-2, main #content #symptom .card-covid .card-menu .card-place .card-2, main #content #protection .card-covid .card-menu .card-place .card-2, main #content #about .card-covid .card-menu .card-place .card-2 {
+    -ms-flex: 0 0 75%;
+    flex: 0 0 75%;
+    max-width: 75%;
+  }
+}
+main #content #information .card-covid .card-menu .card-place .card-3, main #content #symptom .card-covid .card-menu .card-place .card-3, main #content #protection .card-covid .card-menu .card-place .card-3, main #content #about .card-covid .card-menu .card-place .card-3 {
+  -ms-flex: 0 0 26.6666667%;
+  flex: 0 0 26.6666667%;
+  max-width: 26.6666667%;
+  margin: 2rem 0;
+}
+main #content #information .card-covid .card-menu .card-place .card-3 > p, main #content #symptom .card-covid .card-menu .card-place .card-3 > p, main #content #protection .card-covid .card-menu .card-place .card-3 > p, main #content #about .card-covid .card-menu .card-place .card-3 > p {
+  font-size: 2rem;
+  margin: 0;
+}
+main #content #information .card-covid .card-menu .card-place .card-3.infection .icon i, main #content #symptom .card-covid .card-menu .card-place .card-3.infection .icon i, main #content #protection .card-covid .card-menu .card-place .card-3.infection .icon i, main #content #about .card-covid .card-menu .card-place .card-3.infection .icon i {
+  background-color: #FA163F !important;
+}
+main #content #information .card-covid .card-menu .card-place .card-3.infection i, main #content #information .card-covid .card-menu .card-place .card-3.infection h5, main #content #symptom .card-covid .card-menu .card-place .card-3.infection i, main #content #symptom .card-covid .card-menu .card-place .card-3.infection h5, main #content #protection .card-covid .card-menu .card-place .card-3.infection i, main #content #protection .card-covid .card-menu .card-place .card-3.infection h5, main #content #about .card-covid .card-menu .card-place .card-3.infection i, main #content #about .card-covid .card-menu .card-place .card-3.infection h5 {
+  color: #FA163F;
+}
+main #content #information .card-covid .card-menu .card-place .card-3.healed .icon i, main #content #symptom .card-covid .card-menu .card-place .card-3.healed .icon i, main #content #protection .card-covid .card-menu .card-place .card-3.healed .icon i, main #content #about .card-covid .card-menu .card-place .card-3.healed .icon i {
+  background-color: #4DD599 !important;
+}
+main #content #information .card-covid .card-menu .card-place .card-3.healed i, main #content #information .card-covid .card-menu .card-place .card-3.healed h5, main #content #symptom .card-covid .card-menu .card-place .card-3.healed i, main #content #symptom .card-covid .card-menu .card-place .card-3.healed h5, main #content #protection .card-covid .card-menu .card-place .card-3.healed i, main #content #protection .card-covid .card-menu .card-place .card-3.healed h5, main #content #about .card-covid .card-menu .card-place .card-3.healed i, main #content #about .card-covid .card-menu .card-place .card-3.healed h5 {
+  color: #4DD599;
+}
+main #content #information .card-covid .card-menu .card-place .card-3.deceased i, main #content #information .card-covid .card-menu .card-place .card-3.deceased h5, main #content #symptom .card-covid .card-menu .card-place .card-3.deceased i, main #content #symptom .card-covid .card-menu .card-place .card-3.deceased h5, main #content #protection .card-covid .card-menu .card-place .card-3.deceased i, main #content #protection .card-covid .card-menu .card-place .card-3.deceased h5, main #content #about .card-covid .card-menu .card-place .card-3.deceased i, main #content #about .card-covid .card-menu .card-place .card-3.deceased h5 {
+  color: #110133;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu, main #content #symptom .card-covid .card-menu .card-place .card-place-menu, main #content #protection .card-covid .card-menu .card-place .card-place-menu, main #content #about .card-covid .card-menu .card-place .card-place-menu {
+  padding: 2.5rem 3rem;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #92B8B6, -5px -5px 10px #fcfcfc;
+  transition: 0.75s;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu:hover, main #content #symptom .card-covid .card-menu .card-place .card-place-menu:hover, main #content #protection .card-covid .card-menu .card-place .card-place-menu:hover, main #content #about .card-covid .card-menu .card-place .card-place-menu:hover {
+  background-color: #110133;
+  transform: scale(1.05);
+  z-index: 100;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu:hover .icon i, main #content #symptom .card-covid .card-menu .card-place .card-place-menu:hover .icon i, main #content #protection .card-covid .card-menu .card-place .card-place-menu:hover .icon i, main #content #about .card-covid .card-menu .card-place .card-place-menu:hover .icon i {
+  background-color: #FFDC34;
+  color: #110133;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu:hover .card-place-title, main #content #symptom .card-covid .card-menu .card-place .card-place-menu:hover .card-place-title, main #content #protection .card-covid .card-menu .card-place .card-place-menu:hover .card-place-title, main #content #about .card-covid .card-menu .card-place .card-place-menu:hover .card-place-title {
+  color: #FFDC34;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu:hover > p, main #content #symptom .card-covid .card-menu .card-place .card-place-menu:hover > p, main #content #protection .card-covid .card-menu .card-place .card-place-menu:hover > p, main #content #about .card-covid .card-menu .card-place .card-place-menu:hover > p {
+  color: #FFDC34;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu .icon, main #content #symptom .card-covid .card-menu .card-place .card-place-menu .icon, main #content #protection .card-covid .card-menu .card-place .card-place-menu .icon, main #content #about .card-covid .card-menu .card-place .card-place-menu .icon {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu .icon i, main #content #symptom .card-covid .card-menu .card-place .card-place-menu .icon i, main #content #protection .card-covid .card-menu .card-place .card-place-menu .icon i, main #content #about .card-covid .card-menu .card-place .card-place-menu .icon i {
+  padding: 2rem;
+  border-radius: 50%;
+  background-color: #110133;
+  font-size: 2rem;
+  color: #E1F4F3;
+  transition: 0.5s;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu .icon i.fa-thermometer-half, main #content #symptom .card-covid .card-menu .card-place .card-place-menu .icon i.fa-thermometer-half, main #content #protection .card-covid .card-menu .card-place .card-place-menu .icon i.fa-thermometer-half, main #content #about .card-covid .card-menu .card-place .card-place-menu .icon i.fa-thermometer-half {
+  padding: 2rem 2.5rem;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu .card-place-title, main #content #symptom .card-covid .card-menu .card-place .card-place-menu .card-place-title, main #content #protection .card-covid .card-menu .card-place .card-place-menu .card-place-title, main #content #about .card-covid .card-menu .card-place .card-place-menu .card-place-title {
+  text-align: center;
+  font-weight: bold;
+  word-wrap: break-word;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  margin: 2rem 0;
+}
+@media (max-width: 767px) {
+  main #content #information .card-covid .card-menu .card-place .card-place-menu .card-place-title, main #content #symptom .card-covid .card-menu .card-place .card-place-menu .card-place-title, main #content #protection .card-covid .card-menu .card-place .card-place-menu .card-place-title, main #content #about .card-covid .card-menu .card-place .card-place-menu .card-place-title {
+    font-size: 1.3rem;
+  }
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu > .virus, main #content #symptom .card-covid .card-menu .card-place .card-place-menu > .virus, main #content #protection .card-covid .card-menu .card-place .card-place-menu > .virus, main #content #about .card-covid .card-menu .card-place .card-place-menu > .virus {
+  font-size: 1.5rem;
+  text-align: center;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu > p, main #content #symptom .card-covid .card-menu .card-place .card-place-menu > p, main #content #protection .card-covid .card-menu .card-place .card-place-menu > p, main #content #about .card-covid .card-menu .card-place .card-place-menu > p {
+  text-align: center;
+}
+main #content #information .card-covid .card-menu .card-place .card-place-menu.four .icon i, main #content #symptom .card-covid .card-menu .card-place .card-place-menu.four .icon i, main #content #protection .card-covid .card-menu .card-place .card-place-menu.four .icon i, main #content #about .card-covid .card-menu .card-place .card-place-menu.four .icon i {
+  padding: 1.85rem 2rem;
+}
+main #content #information .card-covid .card-menu.carding, main #content #symptom .card-covid .card-menu.carding, main #content #protection .card-covid .card-menu.carding, main #content #about .card-covid .card-menu.carding {
+  padding: 1rem 0 !important;
+}
+main #content #information .card-covid .card-menu.carding .card-3, main #content #symptom .card-covid .card-menu.carding .card-3, main #content #protection .card-covid .card-menu.carding .card-3, main #content #about .card-covid .card-menu.carding .card-3 {
+  padding: 2.5rem 0 !important;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content #information .card-covid .card-menu.carding .card-3, main #content #symptom .card-covid .card-menu.carding .card-3, main #content #protection .card-covid .card-menu.carding .card-3, main #content #about .card-covid .card-menu.carding .card-3 {
+    flex: 0 0 74%;
+    -ms-flex: 0 0 74%;
+    max-width: 74%;
+  }
+}
+@media (max-width: 767px) {
+  main #content #information .card-covid .card-menu.carding .card-3, main #content #symptom .card-covid .card-menu.carding .card-3, main #content #protection .card-covid .card-menu.carding .card-3, main #content #about .card-covid .card-menu.carding .card-3 {
+    flex: 0 0 80%;
+    -ms-flex: 0 0 80%;
+    max-width: 80%;
+  }
+  main #content #information .card-covid .card-menu.carding .card-3 .icon .card-place-title, main #content #symptom .card-covid .card-menu.carding .card-3 .icon .card-place-title, main #content #protection .card-covid .card-menu.carding .card-3 .icon .card-place-title, main #content #about .card-covid .card-menu.carding .card-3 .icon .card-place-title {
+    font-size: 1.25rem;
+  }
+  main #content #information .card-covid .card-menu.carding .card-3 .icon p, main #content #symptom .card-covid .card-menu.carding .card-3 .icon p, main #content #protection .card-covid .card-menu.carding .card-3 .icon p, main #content #about .card-covid .card-menu.carding .card-3 .icon p {
+    font-size: 1.25rem !important;
+  }
+}
+main #content #information .card-covid .card-menu.virus-information, main #content #symptom .card-covid .card-menu.virus-information, main #content #protection .card-covid .card-menu.virus-information, main #content #about .card-covid .card-menu.virus-information {
+  background-color: #110133;
+  padding: 2rem 1rem;
+  margin: 0 3rem 4rem;
+  border-radius: 1rem;
+}
+main #content #information .card-covid .card-menu.virus-information .virus-content, main #content #symptom .card-covid .card-menu.virus-information .virus-content, main #content #protection .card-covid .card-menu.virus-information .virus-content, main #content #about .card-covid .card-menu.virus-information .virus-content {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+main #content #information .card-covid .card-menu.virus-information .virus-content .icon-virus, main #content #symptom .card-covid .card-menu.virus-information .virus-content .icon-virus, main #content #protection .card-covid .card-menu.virus-information .virus-content .icon-virus, main #content #about .card-covid .card-menu.virus-information .virus-content .icon-virus {
+  padding: 1rem;
+  background: #110133;
+  box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+}
+main #content #information .card-covid .card-menu.virus-information .virus-content .icon-virus span, main #content #symptom .card-covid .card-menu.virus-information .virus-content .icon-virus span, main #content #protection .card-covid .card-menu.virus-information .virus-content .icon-virus span, main #content #about .card-covid .card-menu.virus-information .virus-content .icon-virus span {
+  color: #FFDC34;
+  font-size: 2.5rem;
+}
+main #content #information .card-covid .card-menu.virus-information .virus-content .content-virus, main #content #symptom .card-covid .card-menu.virus-information .virus-content .content-virus, main #content #protection .card-covid .card-menu.virus-information .virus-content .content-virus, main #content #about .card-covid .card-menu.virus-information .virus-content .content-virus {
+  margin-top: 2rem;
+}
+main #content #information .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #symptom .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #protection .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #about .card-covid .card-menu.virus-information .virus-content .content-virus p {
+  color: #FFDC34;
+  text-indent: 2rem;
+  font-size: 1.25rem;
+}
+@media (max-width: 767px) {
+  main #content #information .card-covid .card-menu.virus-information, main #content #symptom .card-covid .card-menu.virus-information, main #content #protection .card-covid .card-menu.virus-information, main #content #about .card-covid .card-menu.virus-information {
+    margin: 0 1rem 2rem 1rem;
+  }
+  main #content #information .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #symptom .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #protection .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #about .card-covid .card-menu.virus-information .virus-content .content-virus p {
+    font-size: 1rem;
+    text-align: center;
+    text-indent: 0;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content #information .card-covid .card-menu.virus-information, main #content #symptom .card-covid .card-menu.virus-information, main #content #protection .card-covid .card-menu.virus-information, main #content #about .card-covid .card-menu.virus-information {
+    margin: 0 1rem 2rem 1rem;
+  }
+  main #content #information .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #symptom .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #protection .card-covid .card-menu.virus-information .virus-content .content-virus p, main #content #about .card-covid .card-menu.virus-information .virus-content .content-virus p {
+    font-size: 1rem;
+    text-align: center;
+    text-indent: 0;
+  }
+}
+main #content #information .card-covid.bg-dark-blue-card, main #content #symptom .card-covid.bg-dark-blue-card, main #content #protection .card-covid.bg-dark-blue-card, main #content #about .card-covid.bg-dark-blue-card {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  background-color: #110133 !important;
+  box-shadow: none !important;
+}
+main #content #information .card-covid.bg-dark-blue-card > .card-title, main #content #symptom .card-covid.bg-dark-blue-card > .card-title, main #content #protection .card-covid.bg-dark-blue-card > .card-title, main #content #about .card-covid.bg-dark-blue-card > .card-title {
+  color: #FFDC34;
+}
+main #content #information .card-covid.bg-dark-blue-card .title-hobby, main #content #symptom .card-covid.bg-dark-blue-card .title-hobby, main #content #protection .card-covid.bg-dark-blue-card .title-hobby, main #content #about .card-covid.bg-dark-blue-card .title-hobby {
+  width: 50%;
+}
+main #content #information .card-covid.bg-dark-blue-card .title-hobby > h4, main #content #symptom .card-covid.bg-dark-blue-card .title-hobby > h4, main #content #protection .card-covid.bg-dark-blue-card .title-hobby > h4, main #content #about .card-covid.bg-dark-blue-card .title-hobby > h4 {
+  font-size: 1.625rem;
+  text-align: center;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  background: #110133;
+  box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+  color: #FFDC34;
+}
+main #content #information .card-covid.bg-dark-blue-card .hobby-list, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list, main #content #protection .card-covid.bg-dark-blue-card .hobby-list, main #content #about .card-covid.bg-dark-blue-card .hobby-list {
+  width: 50%;
+  padding-bottom: 2.5rem;
+  border-bottom: 2px solid #FFDC34;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+main #content #information .card-covid.bg-dark-blue-card .hobby-list button, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list button, main #content #protection .card-covid.bg-dark-blue-card .hobby-list button, main #content #about .card-covid.bg-dark-blue-card .hobby-list button {
+  background-color: #FFDC34;
+  outline: none;
+  border: none;
+  border-radius: 12px;
+  padding: 1.75rem;
+  transition: 0.4s;
+  cursor: pointer;
+  color: #110133;
+  font-size: 1.5rem;
+}
+main #content #information .card-covid.bg-dark-blue-card .hobby-list button.active, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list button.active, main #content #protection .card-covid.bg-dark-blue-card .hobby-list button.active, main #content #about .card-covid.bg-dark-blue-card .hobby-list button.active {
+  background: #110133;
+  box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+  color: #FFDC34;
+}
+@media (max-width: 767px) {
+  main #content #information .card-covid.bg-dark-blue-card .hobby-list, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list, main #content #protection .card-covid.bg-dark-blue-card .hobby-list, main #content #about .card-covid.bg-dark-blue-card .hobby-list {
+    width: 70%;
+  }
+  main #content #information .card-covid.bg-dark-blue-card .hobby-list button, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list button, main #content #protection .card-covid.bg-dark-blue-card .hobby-list button, main #content #about .card-covid.bg-dark-blue-card .hobby-list button {
+    font-size: 1.5rem;
+    padding: 1rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content #information .card-covid.bg-dark-blue-card .hobby-list, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list, main #content #protection .card-covid.bg-dark-blue-card .hobby-list, main #content #about .card-covid.bg-dark-blue-card .hobby-list {
+    width: 70%;
+  }
+  main #content #information .card-covid.bg-dark-blue-card .hobby-list button, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list button, main #content #protection .card-covid.bg-dark-blue-card .hobby-list button, main #content #about .card-covid.bg-dark-blue-card .hobby-list button {
+    font-size: 1.5rem;
+    padding: 1.25rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content #information .card-covid.bg-dark-blue-card .hobby-list, main #content #symptom .card-covid.bg-dark-blue-card .hobby-list, main #content #protection .card-covid.bg-dark-blue-card .hobby-list, main #content #about .card-covid.bg-dark-blue-card .hobby-list {
+    width: 70%;
+  }
+}
+main #content #information .card-covid.bg-dark-blue-card .hobby-desc, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc, main #content #about .card-covid.bg-dark-blue-card .hobby-desc {
+  width: 70%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding: 2rem;
+  background: #110133;
+  box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+}
+main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-design, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-design, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-design, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-design, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking {
+  display: none;
+  margin-bottom: 2rem;
+}
+main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > h4, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > h4, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > h4, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > h4, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > h4, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > h4, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > h4, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > h4, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > h4, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > h4, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > h4, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > h4, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > h4, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > h4, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > h4, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > h4 {
+  font-family: "Nothing You Could Do", cursive;
+  color: #FFDC34;
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding > p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking > p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-design > p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking > p {
+  color: #FFDC34;
+  font-size: 1.25rem;
+}
+@media (max-width: 767px) {
+  main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p {
+    text-align: center;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #information .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #symptom .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #protection .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-coding p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-networking p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-design p, main #content #about .card-covid.bg-dark-blue-card .hobby-desc #hobby-hiking p {
+    text-align: center;
+  }
+}
+@media (max-width: 767px) {
+  main #content #information, main #content #symptom, main #content #protection, main #content #about {
+    width: 100%;
+    padding: 2rem;
+  }
+  main #content #information .card-covid > .card-title, main #content #symptom .card-covid > .card-title, main #content #protection .card-covid > .card-title, main #content #about .card-covid > .card-title {
+    font-size: 1.5rem;
+  }
+  main #content #information .card-covid .card-menu, main #content #symptom .card-covid .card-menu, main #content #protection .card-covid .card-menu, main #content #about .card-covid .card-menu {
+    padding: 2rem 0;
+  }
+  main #content #information .card-covid .card-menu > p, main #content #symptom .card-covid .card-menu > p, main #content #protection .card-covid .card-menu > p, main #content #about .card-covid .card-menu > p {
+    font-size: 1rem;
+    text-align: center;
+  }
+  main #content #information .card-covid .card-menu .card-place .card-2, main #content #symptom .card-covid .card-menu .card-place .card-2, main #content #protection .card-covid .card-menu .card-place .card-2, main #content #about .card-covid .card-menu .card-place .card-2 {
+    flex: 0 0 80%;
+    -ms-flex: 0 0 80%;
+    max-width: 80%;
+    margin: 1.5rem 0;
+  }
+}
+main aside {
+  width: 22%;
+  padding: 1rem;
+  margin: 4rem 1rem;
+  height: 700px;
+  background-color: #E1F4F3;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #92B8B6, -5px -5px 10px #fcfcfc;
+}
+main aside .profile-click {
+  display: none;
+}
+main aside .title {
+  margin: 3rem 0;
+  font-size: 2.5rem;
+  color: #110133;
+  text-align: center;
+}
+main aside img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
+main aside .aside-list .aside-menu {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  padding: 0.5rem 1rem;
+  transition: 0.25s;
+  margin: 1rem 0;
+  cursor: default;
+  border-radius: 8px;
+  box-shadow: 3px 3px 6px #92B8B6, -3px -3px 6px #fcfcfc;
+}
+main aside .aside-list .aside-menu:hover {
+  transform: scale(1.05);
+}
+main aside .aside-list .aside-menu.first {
+  padding: 0.5rem 0.25rem 0.5rem 1rem;
+}
+main aside .aside-list .aside-menu i {
+  margin-right: 0.5rem;
+  color: #110133;
+  font-size: 1.25rem;
+}
+main aside .aside-list .aside-menu p {
+  font-size: 1.125rem;
+  color: #110133;
+  margin: 0;
+}
+@media (max-width: 767px) {
+  main #content {
+    width: 100%;
+  }
+  main aside {
+    position: fixed;
+    top: 10%;
+    right: -83%;
+    width: 80%;
+    transition: 0.5s;
+    border: 4px solid #110133;
+    box-shadow: none;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  main aside .profile-click {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: -10%;
+    top: 20%;
+    padding: 1rem;
+    background-color: #E1F4F3;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: 4px solid #110133;
+    border-bottom: 4px solid #110133;
+    border-left: 4px solid #110133;
+  }
+  main aside .profile-click i {
+    font-size: 1.25rem;
+    color: #110133;
+  }
+  main aside h4 {
+    margin: 0.5rem 0 !important;
+    font-size: 2rem !important;
+  }
+  main aside img {
+    width: 50%;
+    margin-bottom: 0.75rem;
+  }
+  main aside .aside-list {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+  }
+  main aside .aside-list .aside-menu {
+    flex: 0 0 28.444444%;
+    max-width: 28.444444%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  main aside .aside-list .aside-menu.first {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  main aside .aside-list .aside-menu.four {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  main #content {
+    width: 100%;
+  }
+  main aside {
+    position: fixed;
+    top: 10%;
+    right: -83%;
+    width: 80%;
+    transition: 0.5s;
+    border: 4px solid #110133;
+    box-shadow: none;
+    z-index: 1000;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    align-items: center;
+  }
+  main aside .profile-click {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    left: -7.8%;
+    top: 20%;
+    padding: 1rem;
+    background-color: #E1F4F3;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top: 4px solid #110133;
+    border-bottom: 4px solid #110133;
+    border-left: 4px solid #110133;
+  }
+  main aside .profile-click i {
+    font-size: 1.25rem;
+    color: #110133;
+  }
+  main aside h4 {
+    margin: 0.5rem 0 !important;
+    font-size: 2rem !important;
+  }
+  main aside img {
+    width: 50%;
+    margin-bottom: 0.75rem;
+  }
+  main aside .aside-list {
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -webkit-justify-content: space-evenly;
+    -moz-justify-content: space-evenly;
+    -ms-justify-content: space-evenly;
+    justify-content: space-evenly;
+    -ms-flex-pack: space-evenly;
+  }
+  main aside .aside-list .aside-menu {
+    flex: 0 0 28.444444%;
+    max-width: 28.444444%;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+  }
+  main aside .aside-list .aside-menu.first {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+  main aside .aside-list .aside-menu.four {
+    flex: 0 0 90%;
+    max-width: 90%;
+  }
+}
+
+footer {
+  width: 100%;
+  background-color: #110133;
+  padding: 2rem;
+}
+footer .upper-footer {
+  width: auto;
+  margin-bottom: 3rem;
+  text-align: center;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+}
+footer .upper-footer .footer-menu {
+  flex: 0 0 33.22222221%;
+  max-width: 33.22222221%;
+  padding: 1rem;
+}
+footer .upper-footer .footer-menu > .title {
+  color: #FFDC34;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+footer .upper-footer .footer-menu > p {
+  color: #FFDC34;
+  margin: 0;
+}
+footer .upper-footer .footer-menu > a {
+  color: #FFDC34;
+  padding-bottom: 0.25rem;
+  margin: 0;
+  text-decoration: none;
+}
+footer .upper-footer .footer-menu > a:hover {
+  text-decoration: underline;
+}
+footer .upper-footer .footer-menu .medsos {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+  -webkit-justify-content: space-evenly;
+  -moz-justify-content: space-evenly;
+  -ms-justify-content: space-evenly;
+  justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+}
+footer .upper-footer .footer-menu .medsos > a {
+  color: #FFDC34;
+  padding: 1rem;
+  margin: 0;
+  font-size: 1.25rem;
+  text-decoration: none;
+  background: #110133;
+  box-shadow: -7px -4px 10px #210164, 4px 7px 10px #04020A;
+}
+footer .upper-footer .footer-menu .medsos > a:hover {
+  box-shadow: inset -5px -2px 8px #210164, inset 2px 5px 8px #04020A;
+}
+footer .upper-footer .footer-menu:first-child {
+  text-align: start;
+}
+@media (max-width: 767px) {
+  footer .upper-footer .footer-menu > .title {
+    font-size: 1.25rem;
+  }
+  footer .upper-footer .footer-menu .medsos > a {
+    padding: 0.5rem;
+  }
+}
+footer .lower-footer {
+  border-top: 4px solid #FFDC34;
+  padding-top: 3rem;
+  padding-bottom: 1rem;
+}
+footer .lower-footer .copyright {
+  color: #FFDC34;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+footer .lower-footer h4 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */

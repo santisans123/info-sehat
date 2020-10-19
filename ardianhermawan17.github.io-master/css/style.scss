@@ -1,0 +1,897 @@
+
+@import "coloring";
+
+@import "font";
+
+@import "responsive-devices";
+
+@import "mixin";
+
+@import "animation";
+
+*{
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  body{
+    padding: 0;
+    margin: 0;
+    font-family: "Sitka Banner", sans-serif ;
+  }
+}
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include flexbox();
+  @include flex-wrap(wrap);
+  background-color: $color_blue_dark;
+  padding: 2rem;
+  z-index: 1000;
+  nav{
+    &:first-child{
+      flex: 0 0 40%;
+      width: 40%;
+      max-width: 40%;
+      @include flexbox();
+
+      a{
+        color: $color_gold !important;
+        border: none;
+      }
+
+      .header-title{
+        @include flexbox();
+        @include flex-direction(column);
+        @include justify-content(center);
+        margin-left: 0.5rem;
+        h4{
+          color: $color_gold;
+          font-size: 1rem;
+          margin: 0;
+        }
+      }
+    }
+
+    &.header-toggle{
+      @include flexbox();
+      @include align-items(center);
+      flex: 0 0 60%;
+      width: 60%;
+      max-width: 60%;
+
+      a{
+        color: $color_gold;
+        margin: 0 1.5rem;
+        font-size: 1.5rem;
+        text-decoration: none;
+        cursor: pointer;
+
+        &.active{
+          padding: 0.5rem 0.75rem;
+          border-radius: 4px;
+          background: #110133;
+          box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+          4px 7px 10px $color_bot_blue_dark_neu;
+        }
+      }
+    }
+
+    &.header-mobile{
+      display: none;
+    }
+
+    @media #{$mobile_device} {
+
+      &:first-child{
+        width: 100%;
+      }
+
+      &.header-mobile{
+        @include flexbox();
+        @include align-items(center);
+        margin-left: auto;
+
+        button{
+          border: none;
+          outline: none;
+          &.active{
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            background: #110133;
+            box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+            4px 7px 10px $color_bot_blue_dark_neu;
+            cursor: pointer;
+
+            &:hover{
+              box-shadow: inset 3px 3px 6px $color_bot_blue_dark_neu,
+              inset -3px -3px 6px $color_top_blue_dark_neu;
+            }
+          }
+          &.clicked{
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            background: #110133;
+            box-shadow: inset 3px 3px 6px $color_bot_blue_dark_neu,
+            inset -3px -3px 6px $color_top_blue_dark_neu;
+            cursor: pointer;
+
+            &:hover{
+              box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+              4px 7px 10px $color_bot_blue_dark_neu;
+            }
+          }
+          i{
+            font-size: 2rem;
+            color: $color_gold;
+            
+          }
+        }
+
+      }
+
+      &.header-toggle{
+        margin: 2rem auto 0 auto;
+        @include flexbox();
+        @include flex-direction(column);
+
+        a{
+          margin: 1rem 0;
+
+          &.active{
+            padding: 0.5rem 4rem;
+            border-radius: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+main {
+  @include flexbox();
+  @include flex-wrap(wrap);
+  @include flex-direction(row);
+  width: 100%;
+  padding-top: 110px;
+  padding-bottom: 30px;
+  background-color: $color_white_blue;
+  .jumbotron{
+    width: 100%;
+    background-color: $color_green_mint;
+    padding: 3em 0;
+    .jumbotron-content{
+      width: 90%;
+      padding: 2.5rem 2rem;
+      margin: auto;
+      background-color: inherit;
+      @include flexbox();
+      @include flex-direction(row);
+      @include flex-wrap(wrap);
+
+      //Neumorphosim
+      border-radius: 20px;
+      box-shadow:  5px 5px 20px #256649,
+      -5px -5px 20px #75ffe9;
+      .jumbotron-image{
+        flex: 0 0 35%;
+        width: 35%;
+        max-width: 35%;
+
+        img{
+          border-radius: 12px;
+          max-width: 100%;
+          height: auto;
+        }
+      }
+      .jumbotron-desc{
+        flex: 0 0 65%;
+        width: 65%;
+        max-width: 65%;
+
+        padding: 0 2rem;
+        @include flexbox();
+        @include flex-direction(column);
+        @include align-items(center);
+        h4{
+          margin: 0;
+          font-size: 2rem;
+          font-weight: bold;
+          color: $color_blue_dark;
+        }
+        p{
+          color: $color_blue_dark;
+          font-size: 1.5rem;
+        }
+
+
+      }
+
+      @media #{$mobile_device}{
+        .jumbotron-image,.jumbotron-desc{
+          flex: 0 0 100%;
+          width: 100%;
+          max-width: 100%;
+        }
+        .jumbotron-desc{
+          margin-top: 1.5rem;
+          p{
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  #content{
+    width: 75%;
+    #information,#symptom,#protection,#about{
+      width: auto;
+      padding:1rem 3rem;
+      .card-covid{
+        padding: 1rem;
+        margin: 3rem 0;
+        //Neumorphosim
+        border-radius: 20px;
+        box-shadow:  5px 5px 10px $color_bot_soft_blue_neu,
+        -5px -5px 10px $color_top_soft_blue_neu;
+       > .card-title{
+          font-weight: bold;
+          text-align: center;
+          color: $color_blue_dark;
+          font-size:  2.5rem;
+          padding: 0 1rem;
+         &.virus{
+           padding: 0 1.6rem;
+         }
+        }
+        .card-menu{
+          padding: 1rem 3rem;
+          > p{
+            font-size: 1.5rem;
+            color: $color_blue_dark;
+            @media #{$tablet_device}{
+              text-align: center;
+            }
+            @media #{$mobile_device}{
+              text-align: center;
+            }
+          }
+          &:last-child{
+            margin-bottom: 2rem;
+          }
+          .card-place{
+            @include flexbox();
+            @include flex-wrap(wrap);
+            @include justify-content(space-evenly);
+            @include align-items(space-evenly);
+            .card-2{
+              -ms-flex: 0 0 38.55556%;
+              flex: 0 0 38.55556%;
+              max-width: 38.55556%;
+              margin: 2rem;
+
+              @media #{$tablet_device} {
+                -ms-flex: 0 0 75%;
+                flex: 0 0 75%;
+                max-width: 75%;
+              }
+            }
+            .card-3{
+              -ms-flex: 0 0 26.6666667%;
+              flex: 0 0 26.6666667%;
+              max-width: 26.6666667%;
+              margin: 2rem 0;
+              > p {
+                font-size: 2rem;
+                margin: 0;
+              }
+              &.infection{
+                .icon{
+                  i{
+                    background-color: $color_red_soft !important;
+                  }
+                }
+                i,h5{
+                  color: $color_red_soft;
+                }
+              }
+              &.healed{
+                .icon{
+                  i{
+                    background-color: $color_green_mint !important;
+                  }
+                }
+                i,h5{
+                  color: $color_green_mint;
+                }
+              }
+              &.deceased{
+                i,h5{
+                  color: $color_blue_dark;
+                }
+              }
+            }
+            .card-place-menu{
+              padding: 2.5rem 3rem;
+
+              //Neumorphosim
+              border-radius: 20px;
+              box-shadow:  5px 5px 10px $color_bot_soft_blue_neu,
+              -5px -5px 10px $color_top_soft_blue_neu;
+              transition: .75s;
+              &:hover{
+                background-color: $color_blue_dark;
+
+                //neumorphism
+                //box-shadow:  5px 5px 10px $color_top_blue_dark_neu,
+                //-5px -5px 10px $color_bot_blue_dark_neu;
+                transform: scale(1.05);
+                z-index: 100;
+              .icon{
+                i{
+                  background-color: $color_gold;
+                  color: $color_blue_dark;
+                }
+              }
+                .card-place-title{
+                  color: $color_gold;
+                }
+                > p{
+                  color: $color_gold;
+                }
+            }
+              .icon{
+                @include flexbox();
+                @include justify-content(center);
+                i{
+                  padding: 2rem;
+                  border-radius: 50%;
+                  background-color: $color_blue_dark;
+                  font-size: 2rem;
+                  color: $color_white_blue;
+                  transition: .5s;
+
+                  &.fa-thermometer-half{
+                    padding: 2rem 2.5rem;
+                  }
+                }
+              }
+              .card-place-title{
+                text-align: center;
+                font-weight: bold;
+                word-wrap: break-word;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+                margin: 2rem 0;
+                @media #{$mobile_device} {
+                  font-size: 1.3rem;
+                }
+              }
+              > .virus{
+                font-size: 1.5rem;
+                text-align: center;
+              }
+              > p{
+                text-align: center;
+              }
+            }
+            .card-place-menu.four{
+              .icon{
+                i{
+                  padding: 1.85rem 2rem;
+                }
+              }
+            }
+          }
+        }
+        .card-menu.carding{
+          padding: 1rem 0 !important;
+          .card-3{
+            padding: 2.5rem 0 !important;
+          }
+
+          @media #{$tablet_device} {
+            .card-3{
+              flex: 0 0 74%;
+              -ms-flex: 0 0 74%;
+              max-width: 74%;
+            }
+          }
+          @media #{$mobile_device} {
+            .card-3{
+              flex: 0 0 80%;
+              -ms-flex: 0 0 80%;
+              max-width: 80%;
+              .icon{
+                .card-place-title{
+                  @include rem(20);
+                }
+                p{
+                  font-size: 1.25rem !important;
+                }
+              }
+            }
+          }
+        }
+        .card-menu.virus-information{
+          background-color: $color_blue_dark;
+          padding: 2rem 1rem;
+          margin: 0 3rem 4rem;
+          border-radius: 1rem;
+          .virus-content{
+            @include flexbox();
+            @include flex-direction(column);
+            @include align-items(center);
+            padding: 1.5rem;
+            margin-top: 2rem;
+
+            .icon-virus{
+              padding: 1rem;
+
+              //neumorphism
+              background: #110133;
+              box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+              4px 7px 10px $color_bot_blue_dark_neu;
+              span{
+                color: $color_gold;
+                @include rem(40);
+              }
+            }
+            .content-virus{
+              margin-top: 2rem;
+              p{
+                color: $color_gold;
+                text-indent: 2rem;
+                @include rem(20);
+              }
+            }
+          }
+          @media #{$mobile_device} {
+            margin: 0 1rem 2rem 1rem;
+            .virus-content{
+              .content-virus{
+                p{
+                  @include rem(16);
+                  text-align: center;
+                  text-indent: 0;
+                }
+              }
+            }
+          }
+          @media #{$tablet_device} {
+            margin: 0 1rem 2rem 1rem;
+            .virus-content{
+              .content-virus{
+                p{
+                  @include rem(16);
+                  text-align: center;
+                  text-indent: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+      .card-covid.bg-dark-blue-card{
+          @include flexbox();
+          @include flex-direction(column);
+          @include align-items(center);
+          background-color: $color_blue_dark!important;
+          box-shadow: none!important;
+        > .card-title{
+          color: $color_gold;
+        }
+        .title-hobby{
+          width: 50%;
+          > h4{
+            @include rem(26);
+            text-align: center;
+            padding: 0.5rem 0.75rem;
+            border-radius: 4px;
+            background: #110133;
+            box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+            4px 7px 10px $color_bot_blue_dark_neu;
+            color: $color_gold;
+          }
+        }
+        .hobby-list{
+          width: 50%;
+          padding-bottom: 2.5rem;
+          border-bottom: 2px solid $color_gold;
+          @include flexbox();
+          @include flex-direction(row);
+          @include justify-content(space-between);
+          button{
+            background-color: $color_gold;
+            outline: none;
+            border: none;
+            border-radius: 12px;
+            padding: 1.75rem;
+            transition: .4s;
+            cursor: pointer;
+
+            color: $color_blue_dark;
+            @include rem(24);
+            &.active{
+              background: #110133;
+              box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+              4px 7px 10px $color_bot_blue_dark_neu;
+
+              color: $color_gold;
+            }
+          }
+          @media #{$mobile_device} {
+            width: 70%;
+            button{
+              @include rem(24);
+              padding: 1rem;
+            }
+          }
+          @media #{$tablet_device} {
+            width: 70%;
+            button{
+              @include rem(24);
+              padding: 1.25rem;
+            }
+          }
+          @media #{$tablet_device} {
+            width: 70%;
+          }
+        }
+        .hobby-desc{
+          width: 70%;
+          margin-top: 2rem;
+          margin-bottom: 2rem;
+          padding: 2rem;
+          background: #110133;
+          box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+          4px 7px 10px $color_bot_blue_dark_neu;
+
+          #hobby-coding,#hobby-networking,#hobby-design,#hobby-hiking{
+            display: none;
+            margin-bottom: 2rem;
+            > h4{
+              font-family: 'Nothing You Could Do', cursive;
+              color: $color_gold;
+              text-align: center;
+              margin-top: 0;
+              margin-bottom: 1rem;
+              @include rem(24);
+            }
+            > p{
+              color: $color_gold;
+              @include rem(20);
+            }
+            @media #{$mobile_device} {
+              p{
+                text-align: center;
+              }
+            }
+            @media #{$tablet_device} {
+              p{
+                text-align: center;
+              }
+            }
+          }
+        }
+      }
+      @media #{$mobile_device} {
+        width: 100%;
+        padding: 2rem;
+        .card-covid{
+          > .card-title{
+            font-size:  1.5rem;
+          }
+          .card-menu{
+            padding: 2rem 0;
+            > p{
+              font-size: 1rem;
+              text-align: center;
+            }
+            .card-place{
+              .card-2{
+                flex: 0 0 80%;
+                -ms-flex: 0 0 80%;
+                max-width: 80%;
+                margin: 1.5rem 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  aside{
+    width: 22%;
+    padding:1rem;
+    margin: 4rem 1rem;
+    height: 700px;
+    background-color: $color_white_blue;
+
+    //Neumorphosim
+    border-radius: 20px;
+    box-shadow:  5px 5px 10px $color_bot_soft_blue_neu,
+    -5px -5px 10px $color_top_soft_blue_neu;
+
+    .profile-click{
+      display: none;
+    }
+    .title{
+      margin: 3rem 0;
+      font-size:  2.5rem;
+      color: $color_blue_dark;
+      text-align: center;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 2rem;
+    }
+    .aside-list{
+      .aside-menu{
+        @include flexbox();
+        padding: .5rem 1rem;
+        transition: .25s;
+        margin: 1rem 0;
+        cursor: default;
+
+        //Neumorphosim
+        border-radius: 8px;
+        box-shadow:  3px 3px 6px $color_bot_soft_blue_neu,
+        -3px -3px 6px $color_top_soft_blue_neu;
+
+        &:hover{
+          transform: scale(1.05);
+        }
+        &.first{
+          padding: .5rem .25rem .5rem 1rem;
+        }
+        i{
+          margin-right: .5rem;
+          color: $color_blue_dark;
+          @include rem(20);
+        }
+        p{
+          @include rem(18);
+          color: $color_blue_dark;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  //MEDIA MAIN AND ASIDE
+  @media #{$mobile_device} {
+    #content{
+      width: 100%;
+    }
+    aside{
+      position: fixed;
+      top: 10%;
+      right: -83%;
+      width: 80%;
+      transition: .5s;
+      border: 4px solid $color_blue_dark;
+      box-shadow: none;
+      z-index: 1000;
+
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      .profile-click{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        left: -10%;
+        top: 20%;
+        padding: 1rem;
+
+        //Neumorphosim
+        background-color: $color_white_blue;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        border-top: 4px solid $color_blue_dark;
+        border-bottom: 4px solid $color_blue_dark;
+        border-left: 4px solid $color_blue_dark;
+        i{
+          @include rem(20);
+          color: $color_blue_dark;
+        }
+      }
+      h4{
+         margin: .5rem 0 !important;
+         font-size: 2rem !important;
+      }
+      img{
+        width: 50%;
+        margin-bottom: .75rem;
+      }
+      .aside-list{
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        @include justify-content(space-evenly);
+        .aside-menu{
+          flex: 0 0 28.444444%;
+          max-width: 28.444444%;
+          margin-top: .25rem;
+          margin-bottom: .25rem;
+          &.first{
+            margin-top: 0;
+            margin-bottom: .5rem;
+          }
+          &.four{
+            flex: 0 0 90%;
+            max-width: 90%;
+          }
+        }
+      }
+    }
+  }
+  @media #{$tablet_device} {
+    #content{
+      width: 100%;
+    }
+    aside{
+      position: fixed;
+      top: 10%;
+      right: -83%;
+      width: 80%;
+      transition: .5s;
+      border: 4px solid $color_blue_dark;
+      box-shadow: none;
+      z-index: 1000;
+
+      @include flexbox();
+      @include flex-direction(column);
+      @include align-items(center);
+      .profile-click{
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        left: -7.8%;
+        top: 20%;
+        padding: 1rem;
+
+        //Neumorphosim
+        background-color: $color_white_blue;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+
+        border-top: 4px solid $color_blue_dark;
+        border-bottom: 4px solid $color_blue_dark;
+        border-left: 4px solid $color_blue_dark;
+        i{
+          @include rem(20);
+          color: $color_blue_dark;
+        }
+      }
+      h4{
+        margin: .5rem 0 !important;
+        font-size: 2rem !important;
+      }
+      img{
+        width: 50%;
+        margin-bottom: .75rem;
+      }
+      .aside-list{
+        width: 100%;
+        @include flexbox();
+        @include flex-direction(row);
+        @include flex-wrap(wrap);
+        @include justify-content(space-evenly);
+        .aside-menu{
+          flex: 0 0 28.444444%;
+          max-width: 28.444444%;
+          margin-top: .25rem;
+          margin-bottom: .25rem;
+          &.first{
+            margin-top: 0;
+            margin-bottom: .5rem;
+          }
+          &.four{
+            flex: 0 0 90%;
+            max-width: 90%;
+          }
+        }
+      }
+    }
+  }
+}
+footer{
+  width: 100%;
+  background-color: $color_blue_dark;
+  padding: 2rem;
+  .upper-footer{
+    width: auto;
+    margin-bottom: 3rem;
+    text-align: center;
+    @include flexbox();
+    @include flex-wrap(wrap);
+    @include justify-content(space-between);
+    .footer-menu{
+      flex: 0 0 33.22222221%;
+      max-width: 33.22222221%;
+      padding: 1rem;
+      > .title{
+        color: $color_gold;
+        text-transform: uppercase;
+        font-weight: bold;
+        @include rem(24);
+        margin: 0;
+        padding-bottom: 2rem;
+      }
+      > p{
+        color: $color_gold;
+        margin: 0;
+      }
+      > a{
+        color: $color_gold;
+        padding-bottom: .25rem;
+        margin: 0;
+        text-decoration: none;
+
+        &:hover{
+         text-decoration: underline;
+        }
+      }
+      .medsos{
+        @include flexbox();
+        @include flex-wrap(nowrap);
+        @include justify-content(space-evenly);
+
+        > a{
+          color: $color_gold;
+          padding: 1rem;
+          margin: 0;
+          @include rem(20);
+          text-decoration: none;
+
+          background: #110133;
+          box-shadow:  -7px -4px 10px $color_top_blue_dark_neu,
+          4px 7px 10px $color_bot_blue_dark_neu;
+
+          &:hover{
+            box-shadow: inset -5px -2px 8px $color_top_blue_dark_neu,
+            inset 2px 5px 8px $color_bot_blue_dark_neu;
+          }
+        }
+      }
+
+      &:first-child{
+        text-align: start;
+      }
+    }
+    @media #{$mobile_device} {
+      .footer-menu{
+        > .title{
+          @include rem(20);
+        }
+        .medsos{
+         > a{
+           padding: .5rem;
+         }
+        }
+      }
+    }
+  }
+  .lower-footer{
+    border-top: 4px solid $color_gold;
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+    .copyright{
+      color: $color_gold;
+      @include rem(24);
+      font-weight: bold;
+      text-align: center;
+    }
+    h4{
+      margin: 0;
+    }
+  }
+}

@@ -1,0 +1,95 @@
+// tambahkan sesuatu disini, seperti tambah-tambahan, nilai tetap,
+
+
+//transition
+@mixin transition ($args...){
+  -webkit-transition: $args;
+  -moz-transition: $args;
+  -ms-transiton: $args;
+  -o-transition: $args;
+  transition: $args;
+}
+
+// transition
+@mixin border-radius($man) {
+  -webkit-border-radius: $man;
+  -moz-border-radius: $man;
+  border-radius: $man;
+}
+
+//Flexbox
+@mixin flexbox() {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+}
+
+//Flex-wrap
+@mixin flex-wrap($variable){
+  flex-wrap: $variable;
+  -ms-flex-wrap: $variable;
+  -webkit-flex-wrap: $variable;
+}
+
+//flex-direction
+@mixin flex-direction($direction){
+  -webkit-flex-direction: $direction;
+  -ms-flex-direction: $direction;
+  flex-direction: $direction;
+}
+
+// justify-content
+@mixin justify-content($justify) {
+  -webkit-justify-content: $justify;
+  -moz-justify-content: $justify;
+  -ms-justify-content: $justify;
+  justify-content: $justify;
+  -ms-flex-pack: $justify;
+}
+
+// align-content
+@mixin align-content($align) {
+  -webkit-align-content: $align;
+  -moz-align-content: $align;
+  -ms-align-content: $align;
+  align-content: $align;
+}
+
+// Cross-axis Alignment
+@mixin align-items($align) {
+  -webkit-align-items: $align;
+  -moz-align-items: $align;
+  -ms-align-items: $align;
+  align-items: $align;
+}
+
+// transform
+// Browser Prefixes
+@mixin transform($transforms) {
+  -webkit-transform: $transforms;
+  -moz-transform: $transforms;
+  -ms-transform: $transforms;
+  transform: $transforms;
+}
+// Translate
+@mixin translate ($x, $y) {
+  @include transform(translate($x, $y));
+}
+// TranslateY
+@mixin translateY ($y) {
+  @include transform(translateY($y));
+}
+// TranslateY
+@mixin translateX ($x) {
+  @include transform(translateX($x));
+}
+
+//for rem and em dont use px if not necresary
+@mixin rem ($size) {
+  font-size: #{($size/16)}rem;
+}
+@mixin em ($size) {
+  font-size: #{($size/16)}em;
+}
