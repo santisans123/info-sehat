@@ -12,8 +12,9 @@ $ukuran : 20px;
 $warna : green;
 $bg-color : orange;
 
- 
 *{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
     color: $color_top_green_mint_neu;
     body{
         background : $bg-color;
