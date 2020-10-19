@@ -1,0 +1,31 @@
+@import "color";
+
+@import "font";
+
+@import "responsive-devices";
+
+@import "mixin";
+
+@import "animation";
+
+$ukuran : 20px;
+$warna : green;
+$bg-color : orange;
+
+ 
+*{
+    color: $color_top_green_mint_neu;
+    body{
+        background : $bg-color;
+	    color :$warna;
+    }
+}
+
+header{
+    background:$bg-color;
+	font-size: $ukuran;
+	color:$warna;
+    
+}
+
+ 
