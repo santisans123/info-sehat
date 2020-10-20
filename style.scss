@@ -1,32 +1,182 @@
-@import "coloring";
-
-@import "font";
-
-@import "responsive-devices";
-
-@import "mixin";
-
-@import "animation";
+$color: rgb(0, 238, 255);
 
 *{
   box-sizing: border-box;
-  scroll-behavior: smooth;
-
+  margin: 0;
+  padding: 0;
   body{
-    padding: 0;
-    margin: 0;
-    font-family: "Sitka Banner", sans-serif ;
+    margin: 5px;
+
   }
 }
 
 header{
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: url("./assets/virus.jpg") no-repeat center/cover ;
+  max-width: 100%;
+  width: 100%;
+  height: 100px;
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  @include flexbox();
-  @include flex-wrap(wrap);
-  background-color: $color_blue_dark;
-  padding: 2rem;
-  z-index: 1000;
+  padding: 15px 0;
+  
+}
+.menu{
+  display: flex;
+  align-items: center;
+  margin: 0 1.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  margin-left: 30px
+  }
+  a{
+        color: white;
+        transition: 0.6s ease;
+        border-radius: 5px;
+        margin: 5px;
+        .btn1{
+          border-radius: 5px;
+          border-bottom: 3px solid;
+          bottom: 10px;
+          cursor: pointer;
+          font-size: 1rem;
+          font-weight: bold;
+          padding: 1em 2em;
+          position: absolute;
+          right: 10px;
+        }
+  }
+
+section{
+  #information{
+    padding: 110px 20px 20px 10px;
+    text-align: center;
+      hover{
+      background-color: rgb(103, 209, 241);
+      color: #000000;
+    .pengertian{
+      margin: 0 auto;
+      padding: 20px 20px 20px 10px;
+      background: transparent;
+      width: 700px;
+      box-shadow: 0 0 10px 5px black;   
+          h2{
+
+          }
+          p{
+
+          }
+        }
+    .sejarah{
+      margin: 0 auto;
+      padding: 10px 20px 20px 10px;
+      background: transparent;
+      width: 500px;
+      box-shadow: 0 0 10px 5px black;
+          h2{
+
+          }
+          p{
+
+          }
+    }
+    .penyebab{
+      margin: 0 auto;
+      padding: 10px 20px 20px 10px;
+      background: transparent;
+      width: 500px;
+      box-shadow: 0 0 10px 5px black;
+          h2{
+
+          }
+          p{                  
+          }
+    }
+  }
+}
+  #healthcare{
+    padding: 50px 20px 20px 10px;
+    text-align: center;
+    .gejala{
+      margin: 0 auto;
+      padding: 30px 20px 20px 85px;
+      background: transparent;
+      width: 600px;
+      height: 300px;
+      box-shadow: 0 0 10px 5px black;
+      h4{
+        padding: 20px 10px 10px 10px;
+      }
+      .sesak{
+        width: 200px;
+        height: 80px;
+        width: 200px;
+        border: 1px solid;
+        float: left;
+        background-color: cyan;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 10px;
+      }
+      .bersin{
+        width: 200px;
+        height: 80px;
+        border: 1px solid;
+        float: left;
+        background-color: cyan;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 10px;
+      }
+      .batuk{
+        width: 200px;
+        height: 80px;
+        border: 1px solid;
+        float: left;
+        background-color: cyan;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 10px;
+      }
+      .demam{
+        width: 200px;
+        height: 80px;
+        border: 1px solid;
+        float: left;
+        background-color: cyan;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 10px;
+      }
+    }
+    .pencegahan{
+      margin: 0 auto;
+      padding: 20px 20px 20px 10px;
+      background: transparent;
+      width: 500px;
+      box-shadow: 0 0 10px 5px black;
+    }
+  }
+  #about{
+    .about{
+      padding: 20px 20px 20px 10px;
+      background: transparent;
+      width: 500px;
+      box-shadow: 0 0 10px 5px black;
+    }
+  }
+  
+footer{
+  background-color: $color;
+  .title{
+  
+  }
+  .link{
+    color: blue;
+  }
 }

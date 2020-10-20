@@ -1,0 +1,181 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+* body {
+  margin: 5px;
+}
+
+header {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  background: url("./assets/virus.jpg") no-repeat center/cover;
+  max-width: 100%;
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  padding: 15px 0;
+}
+
+.menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 1.5rem;
+  font-size: 1.5rem;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 0.5rem 0.75rem;
+  text-decoration: none;
+  margin-left: 30px;
+}
+
+a {
+  color: white;
+  -webkit-transition: 0.6s ease;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  margin: 5px;
+}
+
+a .btn1 {
+  border-radius: 5px;
+  border-bottom: 3px solid;
+  bottom: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1em 2em;
+  position: absolute;
+  right: 10px;
+}
+
+section #information {
+  padding: 110px 20px 20px 10px;
+  text-align: center;
+}
+
+section #information .pengertian {
+  margin: 0 auto;
+  padding: 20px 20px 20px 10px;
+  background: transparent;
+  width: 700px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+section #information .sejarah {
+  margin: 0 auto;
+  padding: 10px 20px 20px 10px;
+  background: transparent;
+  width: 500px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+section #information .penyebab {
+  margin: 0 auto;
+  padding: 10px 20px 20px 10px;
+  background: transparent;
+  width: 500px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+#healthcare {
+  padding: 50px 20px 20px 10px;
+  text-align: center;
+}
+
+#healthcare .gejala {
+  margin: 0 auto;
+  padding: 30px 20px 20px 85px;
+  background: transparent;
+  width: 600px;
+  height: 300px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+#healthcare .gejala h4 {
+  padding: 20px 10px 10px 10px;
+}
+
+#healthcare .gejala .sesak {
+  width: 200px;
+  height: 80px;
+  width: 200px;
+  border: 1px solid;
+  float: left;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .gejala .bersin {
+  width: 200px;
+  height: 80px;
+  border: 1px solid;
+  float: left;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .gejala .batuk {
+  width: 200px;
+  height: 80px;
+  border: 1px solid;
+  float: left;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .gejala .demam {
+  width: 200px;
+  height: 80px;
+  border: 1px solid;
+  float: left;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .pencegahan {
+  margin: 0 auto;
+  padding: 20px 20px 20px 10px;
+  background: transparent;
+  width: 500px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+#about .about {
+  padding: 20px 20px 20px 10px;
+  background: transparent;
+  width: 500px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+footer {
+  background-color: #00eeff;
+}
+
+footer .link {
+  color: blue;
+}
+/*# sourceMappingURL=style.css.map */
