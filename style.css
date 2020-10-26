@@ -22,6 +22,10 @@ header {
   padding: 15px 0;
 }
 
+header h1 {
+  color: white;
+}
+
 .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,13 +33,11 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 0 1.5rem;
   font-size: 1.5rem;
   text-decoration: none;
   cursor: pointer;
-  padding: 0.5rem 0.75rem;
+  padding: 3px 0px 3px 3px;
   text-decoration: none;
-  margin-left: 30px;
 }
 
 a {
@@ -47,62 +49,144 @@ a {
 }
 
 a .btn1 {
-  border-radius: 5px;
-  border-bottom: 3px solid;
-  bottom: 10px;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 1em 2em;
-  position: absolute;
-  right: 10px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+  padding: 5px 10px 5px 10px;
+}
+
+a .btn1:hover {
+  color: #4c2ff1;
+  background-color: #71ebe0;
+}
+
+a .btn2 {
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+  padding: 5px 10px 5px 10px;
+}
+
+a .btn2:hover {
+  color: #4c2ff1;
+  background-color: #71ebe0;
+}
+
+a .btn3 {
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+  padding: 5px 10px 5px 10px;
+}
+
+a .btn3:hover {
+  color: #4c2ff1;
+  background-color: #71ebe0;
+}
+
+section {
+  background-color: #e3fafc;
+  padding: 120px 5px 5px 5px;
 }
 
 section #information {
-  padding: 110px 20px 20px 10px;
   text-align: center;
 }
 
 section #information .pengertian {
   margin: 0 auto;
+  background: url("./assets/flu.jpg") no-repeat center/cover;
   padding: 20px 20px 20px 10px;
-  background: transparent;
-  width: 700px;
+  width: 800px;
+  height: 500px;
   -webkit-box-shadow: 0 0 10px 5px black;
           box-shadow: 0 0 10px 5px black;
 }
 
+section #information .pengertian .boxp {
+  padding: 350px 20px 20px 20px;
+}
+
+section #information .pengertian .boxp p {
+  margin: 0 auto;
+  padding: 15px 10px 10px 10px;
+  border: 1px solid;
+  height: 50px;
+  background-color: #cadbdb;
+  border-radius: 30px;
+}
+
+section #information .pengertian .boxp p:hover {
+  background-color: #7adaf7;
+}
+
 section #information .sejarah {
   margin: 0 auto;
+  color: white;
+  background: url("./assets/fluspanyol.jpeg") no-repeat center/cover;
   padding: 10px 20px 20px 10px;
-  background: transparent;
-  width: 500px;
+  width: 800px;
+  height: 450px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+section #information .sejarah .boxs {
+  padding: 30px 20px 20px 20px;
+}
+
+section #information .sejarah .boxs:hover {
+  background-color: #172726;
+}
+
+section #information .sejarah .boxs p {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  width: 720px;
   -webkit-box-shadow: 0 0 10px 5px black;
           box-shadow: 0 0 10px 5px black;
 }
 
 section #information .penyebab {
   margin: 0 auto;
+  color: white;
+  background: url("./assets/nular.jpg") no-repeat center/cover;
   padding: 10px 20px 20px 10px;
-  background: transparent;
-  width: 500px;
+  width: 800px;
+  height: 400px;
   -webkit-box-shadow: 0 0 10px 5px black;
           box-shadow: 0 0 10px 5px black;
 }
 
+section #information .penyebab .boxb {
+  padding: 90px 20px 20px 20px;
+}
+
+section #information .penyebab .boxb p {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 10px 10px 10px 10px;
+  width: 720px;
+  -webkit-box-shadow: 0 0 10px 5px black;
+          box-shadow: 0 0 10px 5px black;
+}
+
+section #information .penyebab .boxb p:hover {
+  background-color: #272452;
+}
+
 #healthcare {
-  padding: 50px 20px 20px 10px;
+  padding: 40px 10px 20px 10px;
   text-align: center;
 }
 
 #healthcare .gejala {
   margin: 0 auto;
-  padding: 30px 20px 20px 85px;
+  padding: 30px 20px 20px 40px;
   background: transparent;
-  width: 600px;
-  height: 300px;
+  width: 800px;
+  height: 550px;
   -webkit-box-shadow: 0 0 10px 5px black;
           box-shadow: 0 0 10px 5px black;
+  background-color: #9feaf0;
+  -webkit-column-count: 2;
+  -moz-column-count: 2;
 }
 
 #healthcare .gejala h4 {
@@ -110,48 +194,63 @@ section #information .penyebab {
 }
 
 #healthcare .gejala .sesak {
-  width: 200px;
-  height: 80px;
-  width: 200px;
+  height: 200px;
+  width: 350px;
   border: 1px solid;
-  float: left;
   background-color: cyan;
   margin-top: 5px;
   margin-left: 5px;
   border-radius: 10px;
+}
+
+#healthcare .gejala .sesak:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
 }
 
 #healthcare .gejala .bersin {
-  width: 200px;
-  height: 80px;
+  height: 200px;
+  width: 350px;
   border: 1px solid;
-  float: left;
   background-color: cyan;
   margin-top: 5px;
   margin-left: 5px;
   border-radius: 10px;
+}
+
+#healthcare .gejala .bersin:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
 }
 
 #healthcare .gejala .batuk {
-  width: 200px;
-  height: 80px;
+  height: 200px;
+  width: 350px;
   border: 1px solid;
-  float: left;
   background-color: cyan;
   margin-top: 5px;
   margin-left: 5px;
   border-radius: 10px;
 }
 
+#healthcare .gejala .batuk:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
+}
+
 #healthcare .gejala .demam {
-  width: 200px;
-  height: 80px;
+  height: 200px;
+  width: 350px;
   border: 1px solid;
-  float: left;
   background-color: cyan;
   margin-top: 5px;
   margin-left: 5px;
   border-radius: 10px;
+}
+
+#healthcare .gejala .demam:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
 }
 
 #healthcare .pencegahan {
@@ -163,6 +262,66 @@ section #information .penyebab {
           box-shadow: 0 0 10px 5px black;
 }
 
+#healthcare .pencegahan .kebersihan {
+  height: 200px;
+  width: 350px;
+  border: 1px solid;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .pencegahan .kebersihan:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
+}
+
+#healthcare .cucitangan {
+  height: 200px;
+  width: 350px;
+  border: 1px solid;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .cucitangan:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
+}
+
+#healthcare .olahraga {
+  height: 200px;
+  width: 350px;
+  border: 1px solid;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .olahraga:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
+}
+
+#healthcare .vitc {
+  height: 200px;
+  width: 350px;
+  border: 1px solid;
+  background-color: cyan;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+#healthcare .vitc:hover {
+  color: #f1bbef;
+  background-color: #0b0968;
+}
+
 #about .about {
   padding: 20px 20px 20px 10px;
   background: transparent;
@@ -172,7 +331,7 @@ section #information .penyebab {
 }
 
 footer {
-  background-color: #00eeff;
+  background-color: #89befa;
 }
 
 footer .link {
