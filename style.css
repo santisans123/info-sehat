@@ -1,29 +1,41 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 * body {
   margin: 5px;
 }
 
+* body #layout {
+  background-color: white;
+  width: 980px;
+  margin: auto;
+  text-align: left;
+  padding: 2px;
+}
+
 header {
-  width: 100%;
-  max-width: 1100px;
-  margin: 0 auto;
   background: url("./assets/virus.jpg") no-repeat center/cover;
-  max-width: 100%;
+}
+
+header h1 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color: white;
   width: 100%;
-  height: 100px;
-  position: fixed;
+  height: 40px;
+  margin: 0 auto;
+  max-width: 100%;
   top: 0;
   padding: 15px 0;
 }
 
-header h1 {
+header .runningtext {
+  padding-top: 5px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   color: white;
+  background-color: rgba(1, 22, 41, 0.801);
 }
 
 .menu {
@@ -33,308 +45,374 @@ header h1 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 1.5rem;
-  text-decoration: none;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 1.1rem;
   cursor: pointer;
-  padding: 3px 0px 3px 3px;
-  text-decoration: none;
+  padding: 3px 0px 3px 5px;
+  max-width: 100%;
+  height: 23px;
+  background-color: #8ebcf8;
+  letter-spacing: 2px;
 }
 
-a {
+.menu a {
   color: white;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
-  border-radius: 5px;
   margin: 5px;
+  text-decoration: none;
 }
 
-a .btn1 {
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
+.menu a .btn1 {
   padding: 5px 10px 5px 10px;
 }
 
-a .btn1:hover {
-  color: #4c2ff1;
-  background-color: #71ebe0;
+.menu a .btn1:hover {
+  color: black;
+  background-color: rgba(225, 236, 248, 0.938);
 }
 
-a .btn2 {
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
+.menu a .btn2 {
   padding: 5px 10px 5px 10px;
 }
 
-a .btn2:hover {
-  color: #4c2ff1;
-  background-color: #71ebe0;
+.menu a .btn2:hover {
+  color: black;
+  background-color: rgba(225, 236, 248, 0.938);
 }
 
-a .btn3 {
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
+.menu a .btn3 {
   padding: 5px 10px 5px 10px;
 }
 
-a .btn3:hover {
-  color: #4c2ff1;
-  background-color: #71ebe0;
+.menu a .btn3:hover {
+  color: black;
+  background-color: rgba(225, 236, 248, 0.938);
+}
+
+.sidebar {
+  padding: 5px;
+  width: 27%;
+  position: relative;
+  float: right;
+  border-width: 1px;
+  background-color: #eeeded;
+}
+
+.sidebar .widged {
+  width: 100%;
+  background-bottom: 5px;
+  background-color: white;
+}
+
+.sidebar .widged ul {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  list-style-type: none;
+}
+
+.sidebar .widged ul li {
+  padding: 0px 0px 0px 0px;
+  background-position: left;
+  color: white;
+}
+
+.sidebar .widged ul li a {
+  color: black;
+  border-bottom: 1px dotted;
+  display: block;
+  margin-bottom: 5px;
+  padding: 4px 5px 3px 10px;
+  color: black;
+  text-decoration: none;
+}
+
+.sidebar .widged ul li a:hover {
+  color: blue;
+}
+
+.sidebar .gif {
+  width: 99%;
+  height: 250px;
+}
+
+.sidebar .judulwidged {
+  background-color: #73acf7;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 5px 0px 5px 0px;
+  width: 100%;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
 }
 
 section {
-  background-color: #e3fafc;
-  padding: 120px 5px 5px 5px;
+  padding: 5px 5px 5px 5px;
 }
 
 section #information {
-  text-align: center;
-}
-
-section #information .pengertian {
-  margin: 0 auto;
-  background: url("./assets/flu.jpg") no-repeat center/cover;
-  padding: 20px 20px 20px 10px;
-  width: 800px;
-  height: 500px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
-}
-
-section #information .pengertian .boxp {
-  padding: 350px 20px 20px 20px;
-}
-
-section #information .pengertian .boxp p {
-  margin: 0 auto;
-  padding: 15px 10px 10px 10px;
-  border: 1px solid;
-  height: 50px;
-  background-color: #cadbdb;
-  border-radius: 30px;
-}
-
-section #information .pengertian .boxp p:hover {
-  background-color: #7adaf7;
-}
-
-section #information .sejarah {
-  margin: 0 auto;
-  color: white;
-  background: url("./assets/fluspanyol.jpeg") no-repeat center/cover;
-  padding: 10px 20px 20px 10px;
-  width: 800px;
-  height: 450px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
-}
-
-section #information .sejarah .boxs {
-  padding: 30px 20px 20px 20px;
-}
-
-section #information .sejarah .boxs:hover {
-  background-color: #172726;
-}
-
-section #information .sejarah .boxs p {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px;
-  width: 720px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
-}
-
-section #information .penyebab {
-  margin: 0 auto;
-  color: white;
-  background: url("./assets/nular.jpg") no-repeat center/cover;
-  padding: 10px 20px 20px 10px;
-  width: 800px;
-  height: 400px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
-}
-
-section #information .penyebab .boxb {
-  padding: 90px 20px 20px 20px;
-}
-
-section #information .penyebab .boxb p {
-  background: rgba(0, 0, 0, 0.5);
-  padding: 10px 10px 10px 10px;
-  width: 720px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
-}
-
-section #information .penyebab .boxb p:hover {
-  background-color: #272452;
-}
-
-#healthcare {
-  padding: 40px 10px 20px 10px;
-  text-align: center;
-}
-
-#healthcare .gejala {
-  margin: 0 auto;
-  padding: 30px 20px 20px 40px;
-  background: transparent;
-  width: 800px;
-  height: 550px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
-  background-color: #9feaf0;
-  -webkit-column-count: 2;
-  -moz-column-count: 2;
-}
-
-#healthcare .gejala h4 {
-  padding: 20px 10px 10px 10px;
-}
-
-#healthcare .gejala .sesak {
-  height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
+  width: 70%;
+  height: auto;
+  position: relative;
   margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
 }
 
-#healthcare .gejala .sesak:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section .pengertian {
+  border-bottom: 1px solid gray;
+  background-color: white;
 }
 
-#healthcare .gejala .bersin {
+section .pengertian h2 {
+  color: black;
+}
+
+section .pengertian h2:hover {
+  color: blue;
+}
+
+section .pengertian a {
+  text-decoration: none;
+}
+
+section .sejarah {
+  background-color: white;
+  border-bottom: 1px solid gray;
+  width: 99%;
+  height: 280px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+section .sejarah p {
+  font-size: 0.9rem;
+}
+
+section .sejarah a {
+  text-decoration: none;
+}
+
+section .sejarah .gambar {
+  float: left;
+  height: 160px;
+  width: 250px;
+  margin-right: 20px;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 1px;
+  border-radius: 5%;
+}
+
+section .penyebab {
+  background-color: white;
+  width: 99%;
+  height: 210px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+section .penyebab p {
+  font-size: 0.9rem;
+}
+
+section .penyebab a {
+  text-decoration: none;
+}
+
+section .penyebab .gambar {
+  float: left;
+  margin-right: 2px;
   height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+  width: 250px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 1px;
+  border-radius: 5%;
 }
 
-#healthcare .gejala .bersin:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section #healthcare {
+  border-top: 1px solid gray;
+  margin-top: 35px;
 }
 
-#healthcare .gejala .batuk {
-  height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+section #healthcare .gejala {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 15px;
 }
 
-#healthcare .gejala .batuk:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section #healthcare .gejala .sesak {
+  border: 1px solid gray;
+  width: 280px;
+  height: 310px;
+  margin: 10px;
 }
 
-#healthcare .gejala .demam {
-  height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+section #healthcare .gejala .sesak a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#healthcare .gejala .demam:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section #healthcare .gejala .sesak h4 {
+  color: black;
 }
 
-#healthcare .pencegahan {
-  margin: 0 auto;
-  padding: 20px 20px 20px 10px;
-  background: transparent;
-  width: 500px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
+section #healthcare .gejala .sesak h4:hover {
+  color: blue;
+  cursor: pointer;
 }
 
-#healthcare .pencegahan .kebersihan {
-  height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+section #healthcare .gejala .sesak h5 {
+  font-weight: normal;
 }
 
-#healthcare .pencegahan .kebersihan:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section #healthcare .gejala .bersin {
+  border: 1px solid gray;
+  width: 280px;
+  height: 310px;
+  margin: 10px;
 }
 
-#healthcare .cucitangan {
-  height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+section #healthcare .gejala .bersin a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#healthcare .cucitangan:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section #healthcare .gejala .bersin h4 {
+  color: black;
 }
 
-#healthcare .olahraga {
-  height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+section #healthcare .gejala .bersin h4:hover {
+  color: blue;
+  cursor: pointer;
 }
 
-#healthcare .olahraga:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section #healthcare .gejala .bersin h5 {
+  font-weight: normal;
 }
 
-#healthcare .vitc {
-  height: 200px;
-  width: 350px;
-  border: 1px solid;
-  background-color: cyan;
-  margin-top: 5px;
-  margin-left: 5px;
-  border-radius: 10px;
+section #healthcare .gejala .demam {
+  border: 1px solid gray;
+  width: 280px;
+  height: 310px;
+  margin: 10px;
 }
 
-#healthcare .vitc:hover {
-  color: #f1bbef;
-  background-color: #0b0968;
+section #healthcare .gejala .demam a {
+  text-decoration: none;
+  font-weight: bold;
 }
 
-#about .about {
-  padding: 20px 20px 20px 10px;
-  background: transparent;
-  width: 500px;
-  -webkit-box-shadow: 0 0 10px 5px black;
-          box-shadow: 0 0 10px 5px black;
+section #healthcare .gejala .demam h4 {
+  color: black;
 }
 
-footer {
+section #healthcare .gejala .demam h4:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+section #healthcare .gejala .demam h5 {
+  font-weight: normal;
+}
+
+section #healthcare .pencegahan {
+  border-top: 1px solid gray;
+  margin-top: 20px;
+}
+
+section #healthcare .pencegahan .cegah {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 15px;
+}
+
+section #healthcare .pencegahan .cegah .kebersihan {
+  border: 1px solid gray;
+  width: 280px;
+  height: 310px;
+  margin: 10px;
+}
+
+section #healthcare .pencegahan .cegah .kebersihan a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section #healthcare .pencegahan .cegah .kebersihan h4 {
+  color: black;
+}
+
+section #healthcare .pencegahan .cegah .kebersihan h4:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+section #healthcare .pencegahan .cegah .kebersihan h5 {
+  font-weight: normal;
+}
+
+section #healthcare .pencegahan .cegah .olahraga {
+  border: 1px solid gray;
+  width: 280px;
+  height: 310px;
+  margin: 10px;
+}
+
+section #healthcare .pencegahan .cegah .olahraga a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section #healthcare .pencegahan .cegah .olahraga h4 {
+  color: black;
+}
+
+section #healthcare .pencegahan .cegah .olahraga h4:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+section #healthcare .pencegahan .cegah .olahraga h5 {
+  font-weight: normal;
+}
+
+section #healthcare .pencegahan .cegah .vitc {
+  border: 1px solid gray;
+  width: 280px;
+  height: 310px;
+  margin: 10px;
+}
+
+section #healthcare .pencegahan .cegah .vitc a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section #healthcare .pencegahan .cegah .vitc h4 {
+  color: black;
+}
+
+section #healthcare .pencegahan .cegah .vitc h4:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+section #healthcare .pencegahan .cegah .vitc h5 {
+  font-weight: normal;
+}
+
+section #healthcare footer {
   background-color: #89befa;
 }
 
-footer .link {
+section #healthcare footer .link {
   color: blue;
 }
 /*# sourceMappingURL=style.css.map */
