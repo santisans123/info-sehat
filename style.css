@@ -1,6 +1,4 @@
 * {
-  margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -191,7 +189,7 @@ section .sejarah {
   text-align: justify;
   border-bottom: 1px solid gray;
   width: 99%;
-  height: 280px;
+  height: 350px;
   margin-bottom: 5px;
   padding: 5px;
 }
@@ -219,7 +217,7 @@ section .penyebab {
   text-align: justify;
   background-color: white;
   width: 99%;
-  height: 210px;
+  height: 260px;
   margin-bottom: 5px;
   padding: 5px;
 }
@@ -357,7 +355,6 @@ section #healthcare .pencegahan .cegah {
 
 section #healthcare .pencegahan .cegah .kebersihan {
   border: 1px solid gray;
-  width: 280px;
   height: 310px;
   margin: 10px;
   padding: 5px 5px 5px 5px;
@@ -383,7 +380,6 @@ section #healthcare .pencegahan .cegah .kebersihan h5 {
 
 section #healthcare .pencegahan .cegah .olahraga {
   border: 1px solid gray;
-  width: 280px;
   height: 310px;
   margin: 10px;
   padding: 5px 5px 5px 5px;
@@ -409,7 +405,6 @@ section #healthcare .pencegahan .cegah .olahraga h5 {
 
 section #healthcare .pencegahan .cegah .vitc {
   border: 1px solid gray;
-  width: 280px;
   height: 310px;
   margin: 10px;
   padding: 5px 5px 5px 5px;
@@ -433,11 +428,12 @@ section #healthcare .pencegahan .cegah .vitc h5 {
   font-weight: normal;
 }
 
-section #healthcare footer {
-  background-color: #89befa;
+footer {
+  background-color: #8ebcf8;
+  height: 110px;
 }
 
-section #healthcare footer .link {
+footer .link {
   color: blue;
 }
 
@@ -448,30 +444,35 @@ section #healthcare footer .link {
     margin: auto;
   }
   header .runningtext {
-    grid-area: runningtext;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: white;
     background-color: rgba(1, 22, 41, 0.801);
   }
   header #information .sejarah {
-    height: 350px;
+    height: 580px;
   }
   header #information .penyebab {
-    height: 350px;
+    height: 420px;
   }
   header #healthcare .gejala {
+    display: -ms-grid;
+    display: grid;
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
   }
-  header #healthcare .pencegahan {
+  header #healthcare .pencegahan .cegah {
     -ms-grid-rows: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+  }
+  footer {
+    margin: 20px;
+    width: 980px;
   }
 }
 
 @media (max-width: 788px) {
   body {
-    margin: 5px;
+    margin: 15px;
   }
   body #layout {
     background-color: white;
@@ -481,29 +482,57 @@ section #healthcare footer .link {
     padding: 2px;
   }
   body #information .sejarah {
-    height: 350px;
+    height: 430px;
   }
   body #information .penyebab {
-    height: 350px;
+    height: 300px;
+  }
+  body #healthcare .cegah {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
   }
   .sidebar {
     display: none;
   }
+  footer {
+    margin: 10px;
+    max-width: 768;
+  }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 575px) {
   body {
+    margin: 10px;
+  }
+  body header {
+    max-width: 550px;
+    height: 125px;
+    margin: auto;
     margin: 5px;
   }
   body #layout {
     background-color: white;
-    max-width: 500px;
+    max-width: 550px;
     margin: auto;
     text-align: left;
     padding: 2px;
   }
+  body #information .sejarah {
+    height: 570px;
+  }
+  body #information .penyebab {
+    height: 400px;
+  }
   body .gambar {
     width: 400px;
+  }
+  footer {
+    margin: 10px;
+    width: 550;
   }
 }
 /*# sourceMappingURL=style.css.map */

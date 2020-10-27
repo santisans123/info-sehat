@@ -1,13 +1,11 @@
 $color: white;
 
 *{
-  margin: 0;
-  padding: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   body{
     margin: 5px;
     .container{
-      display: grid;
+    display: grid;
     }
     #layout{
       background-color: $color;
@@ -160,7 +158,7 @@ section{
         text-align: justify;
         border-bottom: 1px solid gray;
         width: 99%;
-        height: 280px;
+        height: 350px;
         margin-bottom: 5px;
         padding: 5px;
         p{
@@ -184,7 +182,7 @@ section{
         text-align: justify;
         background-color: white;
         width: 99%;
-        height: 210px;
+        height: 260px;
         margin-bottom: 5px;
         padding: 5px;
         p{
@@ -288,7 +286,6 @@ section{
     margin-top: 15px;
     .kebersihan{
       border: 1px solid gray;
-        width: 280px;
         height: 310px;
         margin: 10px;
         padding: 5px 5px 5px 5px;
@@ -309,7 +306,6 @@ section{
     }
     .olahraga{
       border: 1px solid gray;
-        width: 280px;
         height: 310px;
         margin: 10px;
         padding: 5px 5px 5px 5px;
@@ -330,7 +326,6 @@ section{
     }
     .vitc{
       border: 1px solid gray;
-        width: 280px;
         height: 310px;
         margin: 10px;
         padding: 5px 5px 5px 5px;
@@ -355,9 +350,11 @@ section{
     .about{
     }
   }
-  
+  }
+}
 footer{
-  background-color: rgb(137, 190, 250);;
+  background-color: #8ebcf8;
+  height: 110px;
   .title{
   
   }
@@ -365,9 +362,6 @@ footer{
     color: blue;
   }
   }
-  }
-}
-
 //Responsive Breakpoint
 @media (max-width:1024px){
   header{
@@ -375,33 +369,39 @@ footer{
   height: 125px;
   margin: auto;
   .runningtext{
-    grid-area: runningtext;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:white;
     background-color: rgba(1, 22, 41, 0.801);
     }
     #information{
       .sejarah{
-        height: 350px;
+        height: 580px;
       }
       .penyebab{
-        height: 350px;
+        height: 420px;
       }
     }
     #healthcare{
     .gejala{
+      display: grid;
       grid-template-rows: 1fr 1fr;
       }
     .pencegahan{
+      .cegah{
       grid-template-rows: 1fr 1fr;
+        }
+      }
     }
-    }
+  }
+  footer{
+    margin: 20px;
+    width: 980px;
   }
 }
 
 @media (max-width:788px){ 
   body{
-    margin: 5px;
+    margin: 15px;
     #layout{
       background-color: $color;
       max-width: 768px;
@@ -411,33 +411,59 @@ footer{
     }
     #information{
       .sejarah{
-        height: 350px;
+        height: 430px;
       }
       .penyebab{
-        height: 350px;
+        height: 300px;
       }
     }
     #healthcare{
-    
+      .cegah{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
     }
   }//tablet
   .sidebar{
     display: none;
   }
+  footer{
+    margin: 10px;
+    max-width: 768;
+  }
 }
 
-@media (max-width:500px){ //handphone
+@media (max-width:575px){ //handphone
   body{
-    margin: 5px;
+    margin:10px;
+    header{
+      max-width:550px;
+      height: 125px;
+      margin: auto;
+      margin: 5px;
+    }
     #layout{
       background-color: $color;
-      max-width: 500px;
+      max-width: 550px;
       margin: auto;
       text-align: left;
       padding: 2px;
     }
+    #information{
+      .sejarah{
+        height: 570px;
+      }
+      .penyebab{
+        height: 400px;
+      }
+    }
     .gambar{
       width: 400px;
     }
+  }
+  footer{
+    margin: 10px;
+    width: 550;
   }
 }
