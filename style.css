@@ -8,6 +8,11 @@
   margin: 5px;
 }
 
+* body .container {
+  display: -ms-grid;
+  display: grid;
+}
+
 * body #layout {
   background-color: white;
   width: 980px;
@@ -25,7 +30,7 @@ header h1 {
   color: white;
   width: 100%;
   height: 40px;
-  margin: 0 auto;
+  margin: auto;
   max-width: 100%;
   top: 0;
   padding: 15px 0;
@@ -39,6 +44,9 @@ header .runningtext {
 }
 
 .menu {
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -161,6 +169,7 @@ section #information {
 }
 
 section .pengertian {
+  text-align: justify;
   border-bottom: 1px solid gray;
   background-color: white;
 }
@@ -179,6 +188,7 @@ section .pengertian a {
 
 section .sejarah {
   background-color: white;
+  text-align: justify;
   border-bottom: 1px solid gray;
   width: 99%;
   height: 280px;
@@ -206,6 +216,7 @@ section .sejarah .gambar {
 }
 
 section .penyebab {
+  text-align: justify;
   background-color: white;
   width: 99%;
   height: 210px;
@@ -240,16 +251,19 @@ section #healthcare {
 section #healthcare .gejala {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: 'sesak bersin demam';
   margin-top: 15px;
 }
 
 section #healthcare .gejala .sesak {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: sesak;
   border: 1px solid gray;
   width: 280px;
-  height: 310px;
+  min-height: 310px;
   margin: 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 section #healthcare .gejala .sesak a {
@@ -271,10 +285,14 @@ section #healthcare .gejala .sesak h5 {
 }
 
 section #healthcare .gejala .bersin {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: bersin;
   border: 1px solid gray;
   width: 280px;
   height: 310px;
   margin: 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 section #healthcare .gejala .bersin a {
@@ -296,10 +314,14 @@ section #healthcare .gejala .bersin h5 {
 }
 
 section #healthcare .gejala .demam {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: demam;
   border: 1px solid gray;
   width: 280px;
   height: 310px;
   margin: 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 section #healthcare .gejala .demam a {
@@ -338,6 +360,7 @@ section #healthcare .pencegahan .cegah .kebersihan {
   width: 280px;
   height: 310px;
   margin: 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 section #healthcare .pencegahan .cegah .kebersihan a {
@@ -363,6 +386,7 @@ section #healthcare .pencegahan .cegah .olahraga {
   width: 280px;
   height: 310px;
   margin: 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 section #healthcare .pencegahan .cegah .olahraga a {
@@ -388,6 +412,7 @@ section #healthcare .pencegahan .cegah .vitc {
   width: 280px;
   height: 310px;
   margin: 10px;
+  padding: 5px 5px 5px 5px;
 }
 
 section #healthcare .pencegahan .cegah .vitc a {
@@ -414,5 +439,71 @@ section #healthcare footer {
 
 section #healthcare footer .link {
   color: blue;
+}
+
+@media (max-width: 1024px) {
+  header {
+    max-width: 1024px;
+    height: 125px;
+    margin: auto;
+  }
+  header .runningtext {
+    grid-area: runningtext;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: white;
+    background-color: rgba(1, 22, 41, 0.801);
+  }
+  header #information .sejarah {
+    height: 350px;
+  }
+  header #information .penyebab {
+    height: 350px;
+  }
+  header #healthcare .gejala {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+  header #healthcare .pencegahan {
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 788px) {
+  body {
+    margin: 5px;
+  }
+  body #layout {
+    background-color: white;
+    max-width: 768px;
+    margin: auto;
+    text-align: left;
+    padding: 2px;
+  }
+  body #information .sejarah {
+    height: 350px;
+  }
+  body #information .penyebab {
+    height: 350px;
+  }
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 5px;
+  }
+  body #layout {
+    background-color: white;
+    max-width: 500px;
+    margin: auto;
+    text-align: left;
+    padding: 2px;
+  }
+  body .gambar {
+    width: 400px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

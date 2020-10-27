@@ -7,9 +7,10 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="container">
     <div id="layout">
     <header>
-        <center><h1>INFLUENZA</h1></center>
+        <center><h1>INFLUENZA</h1>
         <div class="runningtext">
             <marquee behavior="scroll" scrollamout="3" onmouseover="this.stop();" onmouseout="this.start();" direction="left">
                 WELCOME IN MY WEBSITE. TAKE CARE OF YOUR HEALTH
@@ -32,21 +33,22 @@
             </div>
             </a>
         </div>
+    </center>
     </header>
-<div class="sidebar">
-    <div class="widged">
-    <img src="./assets/gif.gif" alt="gif" class="gif">
-    <h2 class="judulwidged">Lihat Postingan Lainnya</h2>
-        <ul>
-            <li><a href="https://www.klikdokter.com/penyakit/demam">Demam</a></li>
-            <li><a href="https://www.klikdokter.com/penyakit/batuk-batuk">Batuk</a></li>
-            <li><a href="https://www.klikdokter.com/penyakit/pilek">Pilek</a></li>
-            <li><a href="https://www.klikdokter.com/info-sehat/read/3622294/sering-tertukar-ini-perbedaan-gejala-flu-dan-pilek-biasa">Perbedaan flu dan pilek</a></li>
-        </ul>
-    </div>
-</div>
     <section>
-    <img src="./assets/flu.jpg" alt="influenza" width="680px">
+        <div class="sidebar">
+            <div class="widged">
+            <img src="./assets/gif.gif" alt="gif" class="gif">
+            <h2 class="judulwidged">Lihat Postingan Lainnya</h2>
+                <ul>
+                    <li><a href="https://www.klikdokter.com/penyakit/demam">Demam</a></li>
+                    <li><a href="https://www.klikdokter.com/penyakit/batuk-batuk">Batuk</a></li>
+                    <li><a href="https://www.klikdokter.com/penyakit/pilek">Pilek</a></li>
+                    <li><a href="https://www.klikdokter.com/info-sehat/read/3622294/sering-tertukar-ini-perbedaan-gejala-flu-dan-pilek-biasa">Perbedaan flu dan pilek</a></li>
+                </ul>
+            </div>
+        </div>
+    <img class="gambar" src="./assets/flu.jpg" alt="influenza" width="680px">
     <div id="information">
         <div class="pengertian">
             <a href="#healthcare"><h2>Influenza? perlukah dilakukan pencegahan?</h2></a>
@@ -90,12 +92,15 @@
             <div class="bersin">
                 <center><img src="./assets/bersin.jpg" alt="bersin"width="275px" height="135px"/></center>
                 <h4>Bersin-bersin dan Hidung berair</h4>
-                <br><a href="">Baca Selengkapnya</a>
+                <h5> bersin adalah mekanisme pertahanan tubuh manusia untuk mengusir bakteri dan kuman yang mengancam kesehatan.</h5>
+                <br><br><br><a href="https://www.klikdokter.com/info-sehat/read/3623647/5-hal-pemicu-bersin-yang-perlu-anda-tahu">Baca Selengkapnya</a>
             </div>
             <div class="demam">
                 <center><img src="./assets/demam.jpg" alt="demam"width="275px" height="135px"/></center>
                 <h4>Lemas dan Demam (biasanya ringan)</h4>
-                <br><a href="">Baca Selengkapnya</a>
+                <h5>Seseorang dikatakan demam apabila suhu tubuh lebih dari 38°C. 
+                    Kondisi ini bukanlah suatu penyakit, melainkan sebuah gejala dari penyakit yang mendasari.</h5>
+                <br><br><a href="https://www.klikdokter.com/info-sehat/read/3536265/berbagai-penyebab-demam-dan-cara-mengatasinya">Baca Selengkapnya</a>
             </div>
 
         </div>
@@ -155,6 +160,7 @@
         </center>
         </div>
     </footer>
+    </div>
     </div>
 </body>
 </html>

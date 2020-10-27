@@ -1,5 +1,6 @@
 import { StyleProp, TextStyle } from 'react-native'
 
+export const container: StyleProp<TextStyle>
 export const runningtext: StyleProp<TextStyle>
 export const menu: StyleProp<TextStyle>
 export const btn1: StyleProp<TextStyle>
