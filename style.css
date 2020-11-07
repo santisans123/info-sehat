@@ -125,7 +125,7 @@ header .runningtext {
 
 .sidebar .widged ul li a {
   color: black;
-  border-bottom: 1px dotted;
+  border-bottom: 1px solid;
   display: block;
   margin-bottom: 5px;
   padding: 4px 5px 3px 10px;
