@@ -206,12 +206,11 @@ section{
     border-top: 1px solid gray;
     margin-top: 35px;
     .gejala{
-    display: grid;
-    grid-template-areas:
-    'sesak bersin demam';
-    margin-top: 15px;
-      .sesak{
-        grid-area: sesak;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 15px;
+      padding: 10px 10px 10px 10px;
+      .isigejala{
         border: 1px solid gray;
         width: 280px;
         min-height: 350px;
@@ -232,50 +231,6 @@ section{
           font-weight: normal;
           }
        }
-      .bersin{
-        grid-area: bersin;
-        border: 1px solid gray;
-        width: 280px;
-        min-height: 350px;
-        margin: 10px;
-        padding: 5px 5px 5px 5px;
-        a{
-          text-decoration: none;
-          font-weight: bold;
-        }
-        h4{
-          color: black;
-          &:hover{
-            color: blue;
-            cursor: pointer;
-          }
-        }
-        h5{
-          font-weight: normal;
-          }
-      }
-      .demam{
-        grid-area: demam;
-        border: 1px solid gray;
-        width: 280px;
-        min-height: 350px;
-        margin: 10px;
-        padding: 5px 5px 5px 5px;
-        a{
-          text-decoration: none;
-          font-weight: bold;
-        }
-        h4{
-          color: black;
-          &:hover{
-            color: blue;
-            cursor: pointer;
-          }
-        }
-        h5{
-          font-weight: normal;
-          }
-    }
   }
   .pencegahan{
     border-top: 1px solid gray;
@@ -348,6 +303,7 @@ section{
   }
   #about{
     .about{
+      align-items: center;
     }
   }
   }
@@ -396,15 +352,22 @@ footer{
   footer{
     margin: 20px;
     width: 980px;
+    margin: auto;
   }
 }
 
-@media (max-width:788px){ 
+@media (max-width:768px){ 
   body{
     margin: 15px;
+      header{
+        max-width:748px;
+        height: 125px;
+        margin: auto;
+        margin: 5px;
+      }
     #layout{
       background-color: $color;
-      max-width: 768px;
+      max-width: 758px;
       margin: auto;
       text-align: left;
       padding: 2px;
@@ -430,33 +393,45 @@ footer{
   }
   footer{
     margin: 10px;
-    max-width: 768;
+    max-width: 758px;
+    margin: auto;
   }
 }
 
-@media (max-width:575px){ //handphone
+@media (max-width:500px){ //handphone
   body{
     margin:10px;
     header{
-      max-width:550px;
+      max-width:480px;
       height: 125px;
       margin: auto;
       margin: 5px;
     }
     #layout{
       background-color: $color;
-      max-width: 550px;
+      max-width: 480px;
       margin: auto;
       text-align: left;
       padding: 2px;
     }
     #information{
       .sejarah{
-        height: 570px;
+        height: 600px;
       }
       .penyebab{
-        height: 400px;
+        height: 500px;
       }
+      #healthcare{
+        .gejala{
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          }
+        .pencegahan{
+          .cegah{
+          grid-template-rows: 1fr 1fr;
+            }
+          }
+        }
     }
     .gambar{
       width: 400px;
@@ -464,6 +439,53 @@ footer{
   }
   footer{
     margin: 10px;
-    width: 550;
+    width: 480px;
+    margin: auto;
+  }
+}
+
+@media (max-width:360px){ //handphone
+  body{
+    margin:10px;
+    header{
+      max-width:350px;
+      height: 125px;
+      margin: auto;
+      margin: 5px;
+    }
+    #layout{
+      background-color: $color;
+      max-width: 340px;
+      margin: auto;
+      text-align: left;
+      padding: 2px;
+    }
+    #information{
+      .sejarah{
+        height: 600px;
+      }
+      .penyebab{
+        height: 500px;
+      }
+      #healthcare{
+        .gejala{
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          }
+        .pencegahan{
+          .cegah{
+          grid-template-rows: 1fr 1fr;
+            }
+          }
+        }
+    }
+    .gambar{
+      width: 350px;
+    }
+  }
+  footer{
+    margin: 10px;
+    width: 350px;
+    margin: auto;
   }
 }

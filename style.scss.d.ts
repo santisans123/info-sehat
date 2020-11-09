@@ -15,9 +15,7 @@ export const sejarah: StyleProp<TextStyle>
 export const gambar: StyleProp<TextStyle>
 export const penyebab: StyleProp<TextStyle>
 export const gejala: StyleProp<TextStyle>
-export const sesak: StyleProp<TextStyle>
-export const bersin: StyleProp<TextStyle>
-export const demam: StyleProp<TextStyle>
+export const isigejala: StyleProp<TextStyle>
 export const pencegahan: StyleProp<TextStyle>
 export const cegah: StyleProp<TextStyle>
 export const kebersihan: StyleProp<TextStyle>
