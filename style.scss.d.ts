@@ -18,9 +18,7 @@ export const gejala: StyleProp<TextStyle>
 export const isigejala: StyleProp<TextStyle>
 export const pencegahan: StyleProp<TextStyle>
 export const cegah: StyleProp<TextStyle>
-export const kebersihan: StyleProp<TextStyle>
-export const olahraga: StyleProp<TextStyle>
-export const vitc: StyleProp<TextStyle>
+export const isipencegahan: StyleProp<TextStyle>
 export const about: StyleProp<TextStyle>
 export const title: StyleProp<TextStyle>
 export const link: StyleProp<TextStyle>

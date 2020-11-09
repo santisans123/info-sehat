@@ -11,7 +11,7 @@
   display: grid;
 }
 
-* body #layout {
+* body .container #layout {
   background-color: white;
   width: 980px;
   margin: auto;
@@ -294,78 +294,28 @@ section #healthcare .pencegahan .cegah {
   margin-top: 15px;
 }
 
-section #healthcare .pencegahan .cegah .kebersihan {
+section #healthcare .pencegahan .cegah .isipencegahan {
   border: 1px solid gray;
-  height: 310px;
+  height: 350px;
   margin: 10px;
   padding: 5px 5px 5px 5px;
 }
 
-section #healthcare .pencegahan .cegah .kebersihan a {
+section #healthcare .pencegahan .cegah .isipencegahan a {
   text-decoration: none;
   font-weight: bold;
 }
 
-section #healthcare .pencegahan .cegah .kebersihan h4 {
+section #healthcare .pencegahan .cegah .isipencegahan h4 {
   color: black;
 }
 
-section #healthcare .pencegahan .cegah .kebersihan h4:hover {
+section #healthcare .pencegahan .cegah .isipencegahan h4:hover {
   color: blue;
   cursor: pointer;
 }
 
-section #healthcare .pencegahan .cegah .kebersihan h5 {
-  font-weight: normal;
-}
-
-section #healthcare .pencegahan .cegah .olahraga {
-  border: 1px solid gray;
-  height: 310px;
-  margin: 10px;
-  padding: 5px 5px 5px 5px;
-}
-
-section #healthcare .pencegahan .cegah .olahraga a {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section #healthcare .pencegahan .cegah .olahraga h4 {
-  color: black;
-}
-
-section #healthcare .pencegahan .cegah .olahraga h4:hover {
-  color: blue;
-  cursor: pointer;
-}
-
-section #healthcare .pencegahan .cegah .olahraga h5 {
-  font-weight: normal;
-}
-
-section #healthcare .pencegahan .cegah .vitc {
-  border: 1px solid gray;
-  height: 310px;
-  margin: 10px;
-  padding: 5px 5px 5px 5px;
-}
-
-section #healthcare .pencegahan .cegah .vitc a {
-  text-decoration: none;
-  font-weight: bold;
-}
-
-section #healthcare .pencegahan .cegah .vitc h4 {
-  color: black;
-}
-
-section #healthcare .pencegahan .cegah .vitc h4:hover {
-  color: blue;
-  cursor: pointer;
-}
-
-section #healthcare .pencegahan .cegah .vitc h5 {
+section #healthcare .pencegahan .cegah .isipencegahan h5 {
   font-weight: normal;
 }
 

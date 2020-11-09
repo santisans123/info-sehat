@@ -2,26 +2,26 @@ $color: white;
 
 *{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  body{
+    body{
     margin: 5px;
     .container{
-    display: grid;
+      display: grid;
+      #layout{
+        background-color: $color;
+        width: 980px;
+        margin: auto;
+        text-align: left;
+        padding: 2px;
+      }
     }
-    #layout{
-      background-color: $color;
-      width: 980px;
-      margin: auto;
-      text-align: left;
-      padding: 2px;
-    }
-  }
+  } 
 }
 
 header{
   background: url("./assets/virus.jpg") no-repeat center/cover ;
   h1{
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  color: white;
+  color:$color;
   width: 100%;
   height: 40px;
   margin: auto;
@@ -236,12 +236,12 @@ section{
     border-top: 1px solid gray;
     margin-top: 20px;
     .cegah{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin-top: 15px;
-    .kebersihan{
-      border: 1px solid gray;
-        height: 310px;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 15px;
+      .isipencegahan{
+        border: 1px solid gray;
+        height: 350px;
         margin: 10px;
         padding: 5px 5px 5px 5px;
         a{
@@ -259,46 +259,7 @@ section{
           font-weight: normal;
           }
     }
-    .olahraga{
-      border: 1px solid gray;
-        height: 310px;
-        margin: 10px;
-        padding: 5px 5px 5px 5px;
-        a{
-          text-decoration: none;
-          font-weight: bold;
-        }
-        h4{
-          color: black;
-          &:hover{
-            color: blue;
-            cursor: pointer;
-          }
-        }
-        h5{
-          font-weight: normal;
-          }
-    }
-    .vitc{
-      border: 1px solid gray;
-        height: 310px;
-        margin: 10px;
-        padding: 5px 5px 5px 5px;
-        a{
-          text-decoration: none;
-          font-weight: bold;
-        }
-        h4{
-          color: black;
-          &:hover{
-            color: blue;
-            cursor: pointer;
-          }
-        }
-        h5{
-          font-weight: normal;
-          }
-        }
+    
     }
   }
   #about{
