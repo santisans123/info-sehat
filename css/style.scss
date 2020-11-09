@@ -1,0 +1,426 @@
+$color: white;
+
+*{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    body{
+    margin: 5px;
+    .container{
+      display: grid;
+      #layout{
+        background-color: $color;
+        width: 980px;
+        margin: auto;
+        text-align: left;
+        padding: 2px;
+      }
+    }
+  } 
+}
+
+header{
+  background: url("../assets/virus.jpg") no-repeat center/cover ;
+    h1{
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      color:$color;
+      width: 100%;
+      height: 40px;
+      margin: auto;
+      max-width: 100%;
+      top: 0;
+      padding: 15px 0;
+    }
+    .runningtext{
+      padding-top: 5px;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color:white;
+      background-color: rgba(1, 22, 41, 0.801);
+    }
+    .menu{
+      order: -1;
+      display: flex;
+      align-items: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      font-size: 1.1rem;
+      cursor: pointer;
+      padding: 3px 0px 3px 5px;
+      max-width: 100%;
+      height: 23px;
+      background-color: #8ebcf8;
+      letter-spacing: 2px;
+      a{
+        color: white;
+        transition: 0.6s ease;
+        margin: 5px;
+        text-decoration: none;
+      .btn{
+        padding: 5px 10px 5px 10px;
+        &:hover{
+          color: black;
+          background-color: rgba(225, 236, 248, 0.938);
+        } 
+      }
+    }
+  }
+}
+
+
+section{
+  padding: 5px 5px 5px 5px;
+  .sidebar{
+    padding: 5px;
+    width: 27%;
+    position: relative;
+    float: right;
+    border-width: 1px;
+    background-color: rgb(238, 237, 237);
+    .widged{
+      width: 100%;
+      background-bottom: 5px;
+      background-color: white;
+      .gif{
+        width: 99%;
+        height: 250px;
+      }
+      .judulwidged{
+        background-color:  #73acf7;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        padding: 5px 0px 5px 0px;
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        text-align: center;
+        color:black;
+        font-weight: bold;
+        font-size: 1rem;
+        margin-bottom: 5px;
+      }
+      ul{
+        margin: 0px 0px 0px 0px;
+        padding: 0px 0px 0px 0px;
+        list-style-type: none;
+          li{
+            padding: 0px 0px 0px 0px;
+            background-position: left;
+            color: white;
+            a{
+              color: black;
+              border-bottom: 1px solid;
+              display: block;
+              margin-bottom: 5px;
+              padding: 4px 5px 3px 10px;
+              color: black;
+              text-decoration: none;
+              &:hover{
+              color: blue;
+              }
+            }
+        }
+      }
+    } 
+  }
+  #information{
+    width: 70%;
+    height: auto;
+    position: relative;
+    margin-top: 5px;
+    .gambar{
+      float: left;
+      height:160px;
+      width: 250px;
+      margin-right: 20px;
+      margin-bottom: 5px;
+      margin-top: 10px;
+      padding: 1px;
+      border-radius: 5%;
+    }
+    .pengertian{
+      text-align: justify;
+      border-bottom: 1px solid gray;
+      background-color: white;
+      h2{
+        color: black;
+        &:hover{
+          color: blue;
+        }
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+    .sejarah{
+      background-color: white;
+      text-align: justify;
+      border-bottom: 1px solid gray;
+      width: 99%;
+      height: 350px;
+      margin-bottom: 5px;
+      padding: 5px;
+      p{
+        font-size: 0.9rem;
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+    .penyebab{
+      text-align: justify;
+      background-color: white;
+      width: 99%;
+      height: 260px;
+      margin-bottom: 5px;
+      padding: 5px;
+      p{
+        font-size: 0.9rem;
+      }
+      a{
+        text-decoration: none;
+      }
+    }
+  }
+  #healthcare{
+    border-top: 1px solid gray;
+    margin-top: 35px;
+    .gejala{
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin-top: 15px;
+      padding: 10px 10px 10px 10px;
+      .isigejala{
+        border: 1px solid gray;
+        width: 280px;
+        min-height: 350px;
+        margin: 10px;
+        padding: 5px 5px 5px 5px;
+        a{
+          text-decoration: none;
+          font-weight: bold;
+        }
+        h4{
+          color: black;
+          &:hover{
+            color: blue;
+            cursor: pointer;
+          }
+        }
+        h5{
+          font-weight: normal;
+        }
+       }
+      }
+    .pencegahan{
+      border-top: 1px solid gray;
+      margin-top: 20px;
+      .cegah{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-top: 15px;
+        .isipencegahan{
+          border: 1px solid gray;
+          height: 350px;
+          margin: 10px;
+          padding: 5px 5px 5px 5px;
+          a{
+            text-decoration: none;
+            font-weight: bold;
+          }
+          h4{
+            color: black;
+            &:hover{
+              color: blue;
+              cursor: pointer;
+            }
+          }
+          h5{
+            font-weight: normal;
+          }
+        } 
+      }
+    }
+  }
+  #about{
+    .about{
+      align-items: center;
+    }
+  }
+}
+
+footer{
+  background-color: #8ebcf8;
+  height: 110px;
+  .title{
+  }
+  .link{
+    color: blue;
+  }
+}
+
+//Responsive Breakpoint
+@media (max-width:1024px){
+  header{
+  max-width:1024px;
+  height: 125px;
+  margin: auto;
+  .runningtext{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:white;
+    background-color: rgba(1, 22, 41, 0.801);
+    }
+    #information{
+      .sejarah{
+        height: 580px;
+      }
+      .penyebab{
+        height: 420px;
+      }
+    }
+    #healthcare{
+    .gejala{
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      }
+    .pencegahan{
+      .cegah{
+      grid-template-rows: 1fr 1fr;
+        }
+      }
+    }
+  }
+  footer{
+    margin: 20px;
+    width: 980px;
+    margin: auto;
+  }
+}
+
+@media (max-width:768px){ 
+  body{
+    margin: 15px;
+      header{
+        max-width:748px;
+        height: 125px;
+        margin: auto;
+        margin: 5px;
+      }
+    #layout{
+      background-color: $color;
+      max-width: 758px;
+      margin: auto;
+      text-align: left;
+      padding: 2px;
+    }
+    #information{
+      .sejarah{
+        height: 430px;
+      }
+      .penyebab{
+        height: 300px;
+      }
+    }
+    #healthcare{
+      .cegah{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+      }
+    }
+  }//tablet
+  .sidebar{
+    display: none;
+  }
+  footer{
+    margin: 10px;
+    max-width: 758px;
+    margin: auto;
+  }
+}
+
+@media (max-width:500px){ //handphone
+  body{
+    margin:10px;
+    header{
+      max-width:480px;
+      height: 125px;
+      margin: auto;
+      margin: 5px;
+    }
+    #layout{
+      background-color: $color;
+      max-width: 480px;
+      margin: auto;
+      text-align: left;
+      padding: 2px;
+    }
+    #information{
+      .sejarah{
+        height: 600px;
+      }
+      .penyebab{
+        height: 500px;
+      }
+      #healthcare{
+        .gejala{
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          }
+        .pencegahan{
+          .cegah{
+          grid-template-rows: 1fr 1fr;
+            }
+          }
+        }
+    }
+    .gambar{
+      width: 400px;
+    }
+  }
+  footer{
+    margin: 10px;
+    width: 480px;
+    margin: auto;
+  }
+}
+
+@media (max-width:360px){ //handphone
+  body{
+    margin:10px;
+    header{
+      max-width:350px;
+      height: 125px;
+      margin: auto;
+      margin: 5px;
+    }
+    #layout{
+      background-color: $color;
+      max-width: 340px;
+      margin: auto;
+      text-align: left;
+      padding: 2px;
+    }
+    #information{
+      .sejarah{
+        height: 600px;
+      }
+      .penyebab{
+        height: 500px;
+      }
+      #healthcare{
+        .gejala{
+          display: grid;
+          grid-template-rows: 1fr 1fr;
+          }
+        .pencegahan{
+          .cegah{
+          grid-template-rows: 1fr 1fr;
+            }
+          }
+        }
+    }
+    .gambar{
+      width: 350px;
+    }
+  }
+  footer{
+    margin: 10px;
+    width: 350px;
+    margin: auto;
+  }
+}

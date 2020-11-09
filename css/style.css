@@ -20,7 +20,7 @@
 }
 
 header {
-  background: url("./assets/virus.jpg") no-repeat center/cover;
+  background: url("../assets/virus.jpg") no-repeat center/cover;
 }
 
 header h1 {
@@ -41,7 +41,7 @@ header .runningtext {
   background-color: rgba(1, 22, 41, 0.801);
 }
 
-.menu {
+header .menu {
   -webkit-box-ordinal-group: 0;
       -ms-flex-order: -1;
           order: -1;
@@ -61,7 +61,7 @@ header .runningtext {
   letter-spacing: 2px;
 }
 
-.menu a {
+header .menu a {
   color: white;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
@@ -69,34 +69,20 @@ header .runningtext {
   text-decoration: none;
 }
 
-.menu a .btn1 {
+header .menu a .btn {
   padding: 5px 10px 5px 10px;
 }
 
-.menu a .btn1:hover {
+header .menu a .btn:hover {
   color: black;
   background-color: rgba(225, 236, 248, 0.938);
 }
 
-.menu a .btn2 {
-  padding: 5px 10px 5px 10px;
+section {
+  padding: 5px 5px 5px 5px;
 }
 
-.menu a .btn2:hover {
-  color: black;
-  background-color: rgba(225, 236, 248, 0.938);
-}
-
-.menu a .btn3 {
-  padding: 5px 10px 5px 10px;
-}
-
-.menu a .btn3:hover {
-  color: black;
-  background-color: rgba(225, 236, 248, 0.938);
-}
-
-.sidebar {
+section .sidebar {
   padding: 5px;
   width: 27%;
   position: relative;
@@ -105,44 +91,18 @@ header .runningtext {
   background-color: #eeeded;
 }
 
-.sidebar .widged {
+section .sidebar .widged {
   width: 100%;
   background-bottom: 5px;
   background-color: white;
 }
 
-.sidebar .widged ul {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
-  list-style-type: none;
-}
-
-.sidebar .widged ul li {
-  padding: 0px 0px 0px 0px;
-  background-position: left;
-  color: white;
-}
-
-.sidebar .widged ul li a {
-  color: black;
-  border-bottom: 1px solid;
-  display: block;
-  margin-bottom: 5px;
-  padding: 4px 5px 3px 10px;
-  color: black;
-  text-decoration: none;
-}
-
-.sidebar .widged ul li a:hover {
-  color: blue;
-}
-
-.sidebar .gif {
+section .sidebar .widged .gif {
   width: 99%;
   height: 250px;
 }
 
-.sidebar .judulwidged {
+section .sidebar .widged .judulwidged {
   background-color: #73acf7;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 5px 0px 5px 0px;
@@ -155,8 +115,30 @@ header .runningtext {
   margin-bottom: 5px;
 }
 
-section {
-  padding: 5px 5px 5px 5px;
+section .sidebar .widged ul {
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  list-style-type: none;
+}
+
+section .sidebar .widged ul li {
+  padding: 0px 0px 0px 0px;
+  background-position: left;
+  color: white;
+}
+
+section .sidebar .widged ul li a {
+  color: black;
+  border-bottom: 1px solid;
+  display: block;
+  margin-bottom: 5px;
+  padding: 4px 5px 3px 10px;
+  color: black;
+  text-decoration: none;
+}
+
+section .sidebar .widged ul li a:hover {
+  color: blue;
 }
 
 section #information {
@@ -166,43 +148,7 @@ section #information {
   margin-top: 5px;
 }
 
-section .pengertian {
-  text-align: justify;
-  border-bottom: 1px solid gray;
-  background-color: white;
-}
-
-section .pengertian h2 {
-  color: black;
-}
-
-section .pengertian h2:hover {
-  color: blue;
-}
-
-section .pengertian a {
-  text-decoration: none;
-}
-
-section .sejarah {
-  background-color: white;
-  text-align: justify;
-  border-bottom: 1px solid gray;
-  width: 99%;
-  height: 350px;
-  margin-bottom: 5px;
-  padding: 5px;
-}
-
-section .sejarah p {
-  font-size: 0.9rem;
-}
-
-section .sejarah a {
-  text-decoration: none;
-}
-
-section .sejarah .gambar {
+section #information .gambar {
   float: left;
   height: 160px;
   width: 250px;
@@ -213,7 +159,43 @@ section .sejarah .gambar {
   border-radius: 5%;
 }
 
-section .penyebab {
+section #information .pengertian {
+  text-align: justify;
+  border-bottom: 1px solid gray;
+  background-color: white;
+}
+
+section #information .pengertian h2 {
+  color: black;
+}
+
+section #information .pengertian h2:hover {
+  color: blue;
+}
+
+section #information .pengertian a {
+  text-decoration: none;
+}
+
+section #information .sejarah {
+  background-color: white;
+  text-align: justify;
+  border-bottom: 1px solid gray;
+  width: 99%;
+  height: 350px;
+  margin-bottom: 5px;
+  padding: 5px;
+}
+
+section #information .sejarah p {
+  font-size: 0.9rem;
+}
+
+section #information .sejarah a {
+  text-decoration: none;
+}
+
+section #information .penyebab {
   text-align: justify;
   background-color: white;
   width: 99%;
@@ -222,23 +204,12 @@ section .penyebab {
   padding: 5px;
 }
 
-section .penyebab p {
+section #information .penyebab p {
   font-size: 0.9rem;
 }
 
-section .penyebab a {
+section #information .penyebab a {
   text-decoration: none;
-}
-
-section .penyebab .gambar {
-  float: left;
-  margin-right: 2px;
-  height: 200px;
-  width: 250px;
-  margin-right: 20px;
-  margin-top: 10px;
-  padding: 1px;
-  border-radius: 5%;
 }
 
 section #healthcare {
@@ -319,7 +290,7 @@ section #healthcare .pencegahan .cegah .isipencegahan h5 {
   font-weight: normal;
 }
 
-section #healthcare #about .about {
+section #about .about {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
