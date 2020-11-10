@@ -182,7 +182,7 @@ section #information .sejarah {
   text-align: justify;
   border-bottom: 1px solid gray;
   width: 99%;
-  height: 350px;
+  height: 360px;
   margin-bottom: 5px;
   padding: 5px;
 }
@@ -199,7 +199,7 @@ section #information .penyebab {
   text-align: justify;
   background-color: white;
   width: 99%;
-  height: 260px;
+  height: 255px;
   margin-bottom: 5px;
   padding: 5px;
 }
