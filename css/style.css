@@ -47,9 +47,6 @@ header .runningtext {
 }
 
 header .menu {
-  -webkit-box-ordinal-group: 0;
-      -ms-flex-order: -1;
-          order: -1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -83,9 +80,52 @@ header .menu a .btn:hover {
   background-color: rgba(225, 236, 248, 0.938);
 }
 
-header .menu-toggle span {
+header .menu .menu-toggle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 22px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: relative;
+}
+
+header .menu .menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -5px;
+  top: -3px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+header .menu .menu-toggle input :checked ~ span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+header .menu .menu-toggle span {
   display: block;
   width: 28px;
+  height: 3px;
+  background-color: white;
+  border-bottom: 3px;
+}
+
+header .menu .menu-toggle span :nth-child(2) {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+}
+
+header .menu .menu-toggle span :nth-child(2) :nth-child(4) {
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
 }
 
 section {
@@ -282,7 +322,13 @@ footer .link {
   color: blue;
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1025px) {
+  header .menu .menu-toggle {
+    display: none;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 769px) {
   header {
     max-width: 1024px;
     height: 125px;
@@ -293,10 +339,13 @@ footer .link {
     color: white;
     background-color: rgba(1, 22, 41, 0.801);
   }
-  header #information .sejarah {
+  header .menu .menu-toggle {
+    display: none;
+  }
+  #information .sejarah {
     height: 580px;
   }
-  header #information .penyebab {
+  #information .penyebab {
     height: 420px;
   }
   footer {
@@ -306,7 +355,7 @@ footer .link {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 768px) and (min-width: 501px) {
   body {
     margin: 15px;
   }
@@ -315,6 +364,9 @@ footer .link {
     height: 125px;
     margin: auto;
     margin: 5px;
+  }
+  body header .menu .menu-toggle {
+    display: none;
   }
   body #layout {
     background-color: white;
@@ -339,7 +391,7 @@ footer .link {
   }
 }
 
-@media (max-width: 567px) {
+@media (max-width: 500px) {
   body {
     margin: 10px;
   }
@@ -348,6 +400,9 @@ footer .link {
     height: 125px;
     margin: auto;
     margin: 5px;
+  }
+  body header .menu .btn {
+    display: none;
   }
   body #layout {
     background-color: white;

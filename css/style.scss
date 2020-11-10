@@ -40,7 +40,6 @@ header{
       background-color: rgba(1, 22, 41, 0.801);
     }
     .menu{
-      order: -1;
       display: flex;
       align-items: center;
       font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -64,13 +63,37 @@ header{
         } 
       }
     }
-  }
-  .menu-toggle{
-    span{
-      display: block;
-      width: 28px;
-
-
+    .menu-toggle{
+      display: flex;
+      flex-direction: column;
+      height: 22px;
+      justify-content: space-between;
+      position: relative;
+      input{
+        position: absolute;
+        width: 40px;
+        height: 28px;
+        left: -5px;
+        top:-3px;
+        opacity: 0;
+        cursor: pointer;
+          :checked ~ span:nth-child(2){
+            transform: rotate(45deg);
+          }
+        }
+        span{
+          display: block;
+          width: 28px;
+          height: 3px;
+          background-color: $color_white;
+          border-bottom: 3px;
+          :nth-child(2){
+            transform-origin: 0 0;
+          :nth-child(4){
+            transform-origin: 0 0;
+          }
+        }
+      }
     }
   }
 }
@@ -239,17 +262,32 @@ footer{
   }
 }
 
+@media  (min-width:1025px){
+  header{
+    .menu{
+      .menu-toggle{
+        display: none;
+      }
+    }
+  }
+}
 //Responsive Breakpoint
-@media (max-width:1024px){
+@media (max-width:1024px) and (min-width:769px){
   header{
   max-width:1024px;
   height: 125px;
   margin: auto;
-  .runningtext{
+    .runningtext{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:white;
     background-color: rgba(1, 22, 41, 0.801);
     }
+    .menu{
+      .menu-toggle{
+        display: none;
+      }
+    }
+  }
     #information{
       .sejarah{
         height: 580px;
@@ -258,7 +296,7 @@ footer{
         height: 420px;
       }
     }
-  }
+
   footer{
     margin: 20px;
     width: 980px;
@@ -266,7 +304,7 @@ footer{
   }
 }
 
-@media (max-width:768px){ 
+@media (max-width:768px)and (min-width:501px){ 
   body{
     margin: 15px;
       header{
@@ -274,6 +312,11 @@ footer{
         height: 125px;
         margin: auto;
         margin: 5px;
+        .menu{
+          .menu-toggle{
+            display: none;
+          }
+        }
       }
       #layout{
         background-color: $color_white;
@@ -301,7 +344,7 @@ footer{
   }//tablet
 }
 
-@media (max-width:567px){ //mobile
+@media (max-width:500px){ //mobile
   body{
     margin:10px;
     header{
@@ -309,6 +352,11 @@ footer{
       height: 125px;
       margin: auto;
       margin: 5px;
+      .menu{
+        .btn{
+          display: none;
+        }
+      }
     }
     #layout{
       background-color: $color_white;
