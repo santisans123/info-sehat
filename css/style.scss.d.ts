@@ -12,11 +12,9 @@ export const gambar: StyleProp<TextStyle>
 export const pengertian: StyleProp<TextStyle>
 export const sejarah: StyleProp<TextStyle>
 export const penyebab: StyleProp<TextStyle>
-export const gejala: StyleProp<TextStyle>
-export const isigejala: StyleProp<TextStyle>
-export const pencegahan: StyleProp<TextStyle>
-export const cegah: StyleProp<TextStyle>
-export const isipencegahan: StyleProp<TextStyle>
+export const gejala_pencegahan: StyleProp<TextStyle>
+export const isisehat: StyleProp<TextStyle>
+export const gambar_healthcare: StyleProp<TextStyle>
 export const about: StyleProp<TextStyle>
 export const title: StyleProp<TextStyle>
 export const link: StyleProp<TextStyle>
