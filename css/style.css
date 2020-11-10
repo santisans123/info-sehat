@@ -6,6 +6,12 @@
   margin: 5px;
 }
 
+* body .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 * body .container #layout {
   background-color: white;
   width: 980px;
