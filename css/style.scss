@@ -9,6 +9,7 @@ $color_gray: rgb(243, 240, 240);
     margin: 5px;
     .container{
       display: flex;
+      flex-direction: column;
       #layout{
         background-color: $color_white;
         width: 980px;
@@ -300,7 +301,7 @@ footer{
   }//tablet
 }
 
-@media (max-width:500px){ //handphone
+@media (max-width:567px){ //mobile
   body{
     margin:10px;
     header{
