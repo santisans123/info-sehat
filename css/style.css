@@ -6,11 +6,6 @@
   margin: 5px;
 }
 
-* body .container {
-  display: -ms-grid;
-  display: grid;
-}
-
 * body .container #layout {
   background-color: white;
   width: 980px;
@@ -78,6 +73,11 @@ header .menu a .btn:hover {
   background-color: rgba(225, 236, 248, 0.938);
 }
 
+header .menu-toggle span {
+  display: block;
+  width: 28px;
+}
+
 section {
   padding: 5px 5px 5px 5px;
 }
@@ -88,7 +88,7 @@ section .sidebar {
   position: relative;
   float: right;
   border-width: 1px;
-  background-color: #eeeded;
+  background-color: #f3f0f0;
 }
 
 section .sidebar .widged {
@@ -103,7 +103,7 @@ section .sidebar .widged .gif {
 }
 
 section .sidebar .widged .judulwidged {
-  background-color: #73acf7;
+  background-color: #8ebcf8;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   padding: 5px 0px 5px 0px;
   width: 100%;

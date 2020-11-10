@@ -4,6 +4,7 @@ export const container: StyleProp<TextStyle>
 export const runningtext: StyleProp<TextStyle>
 export const menu: StyleProp<TextStyle>
 export const btn: StyleProp<TextStyle>
+export const menu-toggle: StyleProp<TextStyle>
 export const sidebar: StyleProp<TextStyle>
 export const widged: StyleProp<TextStyle>
 export const gif: StyleProp<TextStyle>
