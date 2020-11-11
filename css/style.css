@@ -78,7 +78,7 @@ header .navbar .menu a {
 }
 
 header .navbar .menu a .btn {
-  padding: 5px 10px 5px 10px;
+  padding: 5px 10px;
 }
 
 header .navbar .menu a .btn:hover {
@@ -87,7 +87,7 @@ header .navbar .menu a .btn:hover {
 }
 
 section {
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px;
 }
 
 section .sidebar {
@@ -114,9 +114,8 @@ section .sidebar .widged .gif {
 section .sidebar .widged .judulwidged {
   background-color: #8ebcf8;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  padding: 5px 0px 5px 0px;
+  padding: 5px 0px;
   width: 100%;
-  margin: 0px 0px 0px 0px;
   text-align: center;
   color: black;
   font-weight: bold;
@@ -129,13 +128,13 @@ section .sidebar .widged .judulwidged .change {
 }
 
 section .sidebar .widged ul {
-  margin: 0px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  margin: 0px 0px;
+  padding: 0px 0px;
   list-style-type: none;
 }
 
 section .sidebar .widged ul li {
-  padding: 0px 0px 0px 0px;
+  padding: 0px 0px;
   background-position: left;
   color: white;
 }
@@ -165,9 +164,7 @@ section #information .gambar {
   float: left;
   height: 160px;
   width: 250px;
-  margin-right: 20px;
-  margin-bottom: 5px;
-  margin-top: 10px;
+  margin-right: 10px 20px 5px 0;
   padding: 1px;
   border-radius: 5%;
 }
@@ -236,7 +233,7 @@ section #healthcare .gejala_pencegahan {
   -ms-grid-columns: (minmax(300px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   margin-top: 15px;
-  padding: 10px 10px 10px 10px;
+  padding: 10px 10px;
 }
 
 section #healthcare .gejala_pencegahan .isisehat {
@@ -244,7 +241,7 @@ section #healthcare .gejala_pencegahan .isisehat {
   width: 280px;
   min-height: 350px;
   margin: 10px;
-  padding: 5px 5px 5px 5px;
+  padding: 5px 5px;
 }
 
 section #healthcare .gejala_pencegahan .isisehat a {
@@ -306,10 +303,14 @@ footer .link {
     display: none;
   }
   section #information .sejarah {
-    height: 580px;
+    height: 370px;
   }
   section #information .penyebab {
-    height: 420px;
+    height: 270px;
+  }
+  section #information .gambar {
+    width: 250px;
+    height: 200px;
   }
   footer {
     margin: 20px;
