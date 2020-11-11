@@ -121,6 +121,7 @@ section .sidebar .widged .judulwidged {
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 5px;
+  text-decoration: none;
 }
 
 section .sidebar .widged .judulwidged .change {
