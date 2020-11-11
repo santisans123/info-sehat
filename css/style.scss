@@ -39,59 +39,30 @@ header{
       color: $color_white;
       background-color: rgba(1, 22, 41, 0.801);
     }
-    .menu{
-      display: flex;
-      align-items: center;
-      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-      font-size: 1.1rem;
-      cursor: pointer;
-      padding: 3px 0px 3px 5px;
-      max-width: 100%;
-      height: 23px;
-      background-color: $color_bluesoft;
-      letter-spacing: 2px;
-      a{
-        color: $color_white;
-        transition: 0.6s ease;
-        margin: 5px;
-        text-decoration: none;
-      .btn{
-        padding: 5px 10px 5px 10px;
-        &:hover{
-          color: black;
-          background-color: rgba(225, 236, 248, 0.938);
-        } 
-      }
-    }
-    .menu-toggle{
-      display: flex;
-      flex-direction: column;
-      height: 22px;
-      justify-content: space-between;
-      position: relative;
-      input{
-        position: absolute;
-        width: 40px;
-        height: 28px;
-        left: -5px;
-        top:-3px;
-        opacity: 0;
+    .navbar{
+        display: flex;
+        align-items: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-size: 1.1rem;
         cursor: pointer;
-          :checked ~ span:nth-child(2){
-            transform: rotate(45deg);
-          }
-        }
-        span{
-          display: block;
-          width: 28px;
-          height: 3px;
-          background-color: $color_white;
-          border-bottom: 3px;
-          :nth-child(2){
-            transform-origin: 0 0;
-          :nth-child(4){
-            transform-origin: 0 0;
-          }
+        padding: 3px 0px 3px 5px;
+        max-width: 100%;
+        height: 23px;
+        background-color: $color_bluesoft;
+        letter-spacing: 2px;
+      .menu{
+        display: flex;
+        a{
+          color: $color_white;
+          transition: 0.6s ease;
+          margin: 5px;
+          text-decoration: none;
+        .btn{
+          padding: 5px 10px 5px 10px;
+          &:hover{
+            color: black;
+            background-color: rgba(225, 236, 248, 0.938);
+          } 
         }
       }
     }
@@ -264,10 +235,8 @@ footer{
 
 @media  (min-width:1025px){
   header{
-    .menu{
-      .menu-toggle{
-        display: none;
-      }
+    .menu-toggle{
+      display: none;
     }
   }
 }
@@ -288,6 +257,7 @@ footer{
       }
     }
   }
+  section{
     #information{
       .sejarah{
         height: 580px;
@@ -296,6 +266,7 @@ footer{
         height: 420px;
       }
     }
+  }
 
   footer{
     margin: 20px;
@@ -318,68 +289,73 @@ footer{
           }
         }
       }
-      #layout{
-        background-color: $color_white;
+        #layout{
+          background-color: $color_white;
+          max-width: 758px;
+          margin: auto;
+          text-align: left;
+          padding: 2px;
+       #information{
+          .sejarah{
+            height: 450px;
+          }
+          .penyebab{
+            height: 320px;
+          }
+        }
+        .gambarflu{
+          width: 520px;
+        }
+      footer{
+        margin: 10px;
         max-width: 758px;
         margin: auto;
-        text-align: left;
-        padding: 2px;
-        .sidebar{
-          display: none;
-        }
-      #information{
-        .sejarah{
-          height: 450px;
-        }
-        .penyebab{
-          height: 320px;
-        }
-      }
-      footer{
-      margin: 10px;
-      max-width: 758px;
-      margin: auto;
       }
     }
   }//tablet
 }
 
-@media (max-width:500px){ //mobile
+@media (max-width:500px) and (min-width:376px) { //mobile
   body{
     margin:10px;
-    header{
-      max-width:480px;
-      height: 125px;
-      margin: auto;
-      margin: 5px;
-      .menu{
-        .btn{
-          display: none;
-        }
-      }
-    }
     #layout{
       background-color: $color_white;
       max-width: 480px;
       margin: auto;
       text-align: left;
       padding: 2px;
-    
-    #information{
-      .sejarah{
-        height: 630px;
-      }
-      .penyebab{
-        height: 470px;
-      }
-    }
-    .gambar{
-      width: 320px;
-      }
-      footer{
-        margin: 10px;
-        width: 480px;
+      header{
+        max-width:480px;
+        height: 125px;
         margin: auto;
+        margin: 5px;
+        .menu{
+          font-size: 1rem;
+        }
+      }
+      section{
+        .sidebar{
+          display: none;
+        }
+        .gambarflu{
+          width: 450px;
+        }
+        #information{
+          .sejarah{
+            height: 630px;
+          }
+          .penyebab{
+            height: 470px;
+          }
+          .gambar{
+            width: 300px;
+          }
+        }
+        footer{
+          margin: 10px;
+          width: 480px;
+          margin: auto;
+        }
       }
     }
   } 
@@ -387,48 +363,44 @@ footer{
 
 @media (max-width:375px){ //iphone
   body{
-    margin:5px;
-    header{
-      max-width:340px;
-      height: 125px;
-      margin: auto;
-      margin: 5px;
-    }
+    margin:10px;
     #layout{
       background-color: $color_white;
-      max-width: 350px;
+      max-width: 480px;
       margin: auto;
       text-align: left;
       padding: 2px;
-      #information{
-        .sejarah{
-          height: 770px;
-        }
-        .penyebab{
-          height: 550px;
-        }
-      }
-      .gambar{
-        width: 230px;
-      }
-      #healthcare{
-        .gejala_pencegahan{
-            .isisehat{
-              border: 1px solid gray;
-              width: 200px;
-              min-height: 350px;
-            }
-        }
-        .gambar_healthcare{
-          height: 135px;
-          width: 200px;
-        }
-      }
-      footer{
-        max-width: 340px;
+      header{
+        max-width:480px;
+        height: 125px;
         margin: auto;
-        h4{
-          font-size: 0.8rem;
+        margin: 5px;
+        .menu{
+          
+        }
+      }
+      section{
+        .sidebar{
+          display: none;
+        }
+        .gambarflu{
+          width: 450px;
+        }
+        #information{
+          .sejarah{
+            height: 630px;
+          }
+          .penyebab{
+            height: 470px;
+          }
+          .gambar{
+            width: 280px;
+          }
+        }
+        footer{
+          margin: 10px;
+          width: 480px;
+          margin: auto;
         }
       }
     }

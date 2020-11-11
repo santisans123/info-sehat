@@ -46,7 +46,7 @@ header .runningtext {
   background-color: rgba(1, 22, 41, 0.801);
 }
 
-header .menu {
+header .navbar {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -63,7 +63,13 @@ header .menu {
   letter-spacing: 2px;
 }
 
-header .menu a {
+header .navbar .menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .navbar .menu a {
   color: white;
   -webkit-transition: 0.6s ease;
   transition: 0.6s ease;
@@ -71,61 +77,13 @@ header .menu a {
   text-decoration: none;
 }
 
-header .menu a .btn {
+header .navbar .menu a .btn {
   padding: 5px 10px 5px 10px;
 }
 
-header .menu a .btn:hover {
+header .navbar .menu a .btn:hover {
   color: black;
   background-color: rgba(225, 236, 248, 0.938);
-}
-
-header .menu .menu-toggle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  height: 22px;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  position: relative;
-}
-
-header .menu .menu-toggle input {
-  position: absolute;
-  width: 40px;
-  height: 28px;
-  left: -5px;
-  top: -3px;
-  opacity: 0;
-  cursor: pointer;
-}
-
-header .menu .menu-toggle input :checked ~ span:nth-child(2) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-}
-
-header .menu .menu-toggle span {
-  display: block;
-  width: 28px;
-  height: 3px;
-  background-color: white;
-  border-bottom: 3px;
-}
-
-header .menu .menu-toggle span :nth-child(2) {
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-}
-
-header .menu .menu-toggle span :nth-child(2) :nth-child(4) {
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
 }
 
 section {
@@ -323,7 +281,7 @@ footer .link {
 }
 
 @media (min-width: 1025px) {
-  header .menu .menu-toggle {
+  header .menu-toggle {
     display: none;
   }
 }
@@ -342,10 +300,10 @@ footer .link {
   header .menu .menu-toggle {
     display: none;
   }
-  #information .sejarah {
+  section #information .sejarah {
     height: 580px;
   }
-  #information .penyebab {
+  section #information .penyebab {
     height: 420px;
   }
   footer {
@@ -375,14 +333,14 @@ footer .link {
     text-align: left;
     padding: 2px;
   }
-  body #layout .sidebar {
-    display: none;
-  }
   body #layout #information .sejarah {
     height: 450px;
   }
   body #layout #information .penyebab {
     height: 320px;
+  }
+  body #layout .gambarflu {
+    width: 520px;
   }
   body #layout footer {
     margin: 10px;
@@ -391,18 +349,9 @@ footer .link {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 500px) and (min-width: 376px) {
   body {
     margin: 10px;
-  }
-  body header {
-    max-width: 480px;
-    height: 125px;
-    margin: auto;
-    margin: 5px;
-  }
-  body header .menu .btn {
-    display: none;
   }
   body #layout {
     background-color: white;
@@ -411,16 +360,31 @@ footer .link {
     text-align: left;
     padding: 2px;
   }
-  body #layout #information .sejarah {
+  body #layout header {
+    max-width: 480px;
+    height: 125px;
+    margin: auto;
+    margin: 5px;
+  }
+  body #layout header .menu {
+    font-size: 1rem;
+  }
+  body #layout section .sidebar {
+    display: none;
+  }
+  body #layout section .gambarflu {
+    width: 450px;
+  }
+  body #layout section #information .sejarah {
     height: 630px;
   }
-  body #layout #information .penyebab {
+  body #layout section #information .penyebab {
     height: 470px;
   }
-  body #layout .gambar {
-    width: 320px;
+  body #layout section #information .gambar {
+    width: 300px;
   }
-  body #layout footer {
+  body #layout section footer {
     margin: 10px;
     width: 480px;
     margin: auto;
@@ -429,45 +393,40 @@ footer .link {
 
 @media (max-width: 375px) {
   body {
-    margin: 5px;
-  }
-  body header {
-    max-width: 340px;
-    height: 125px;
-    margin: auto;
-    margin: 5px;
+    margin: 10px;
   }
   body #layout {
     background-color: white;
-    max-width: 350px;
+    max-width: 480px;
     margin: auto;
     text-align: left;
     padding: 2px;
   }
-  body #layout #information .sejarah {
-    height: 770px;
-  }
-  body #layout #information .penyebab {
-    height: 550px;
-  }
-  body #layout .gambar {
-    width: 230px;
-  }
-  body #layout #healthcare .gejala_pencegahan .isisehat {
-    border: 1px solid gray;
-    width: 200px;
-    min-height: 350px;
-  }
-  body #layout #healthcare .gambar_healthcare {
-    height: 135px;
-    width: 200px;
-  }
-  body #layout footer {
-    max-width: 340px;
+  body #layout header {
+    max-width: 480px;
+    height: 125px;
     margin: auto;
+    margin: 5px;
   }
-  body #layout footer h4 {
-    font-size: 0.8rem;
+  body #layout section .sidebar {
+    display: none;
+  }
+  body #layout section .gambarflu {
+    width: 450px;
+  }
+  body #layout section #information .sejarah {
+    height: 630px;
+  }
+  body #layout section #information .penyebab {
+    height: 470px;
+  }
+  body #layout section #information .gambar {
+    width: 280px;
+  }
+  body #layout section footer {
+    margin: 10px;
+    width: 480px;
+    margin: auto;
   }
 }
 /*# sourceMappingURL=style.css.map */
