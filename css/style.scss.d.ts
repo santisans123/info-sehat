@@ -9,6 +9,7 @@ export const sidebar: StyleProp<TextStyle>
 export const widged: StyleProp<TextStyle>
 export const gif: StyleProp<TextStyle>
 export const judulwidged: StyleProp<TextStyle>
+export const change: StyleProp<TextStyle>
 export const gambar: StyleProp<TextStyle>
 export const pengertian: StyleProp<TextStyle>
 export const sejarah: StyleProp<TextStyle>

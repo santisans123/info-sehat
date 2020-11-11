@@ -108,6 +108,7 @@ section .sidebar .widged {
 section .sidebar .widged .gif {
   width: 99%;
   height: 250px;
+  border-top: 1px solid gray;
 }
 
 section .sidebar .widged .judulwidged {
@@ -121,6 +122,10 @@ section .sidebar .widged .judulwidged {
   font-weight: bold;
   font-size: 1rem;
   margin-bottom: 5px;
+}
+
+section .sidebar .widged .judulwidged .change {
+  margin-top: 20px;
 }
 
 section .sidebar .widged ul {

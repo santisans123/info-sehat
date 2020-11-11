@@ -35,6 +35,13 @@
             <section>
                 <div class="sidebar">
                     <div class="widged">
+                        <h2 class="judulwidged">Change This Page</h2>
+                        <div class="change">
+                            <h3>Change color text</h3>
+                            <label>color:</label>
+                        <input type="color" id="text-color"/>
+                        </div>
+                        <br><br>
                         <img src="./assets/gif.gif" alt="gif" class="gif">
                         <h2 class="judulwidged">Lihat Postingan Lainnya</h2>
                             <ul>
@@ -152,5 +159,10 @@
     </div>
     
 </body>
-
+<script type="text/javascript">
+        var txtColor = document.getElementById('text-color');
+        txtColor.addEventListener("change",(event) => {
+            document.body.style.color = txtColor.value;
+        });
+</script>
 </html>
